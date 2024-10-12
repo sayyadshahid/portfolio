@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #1f252f;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  padding-bottom: 50px;
+}
+
+.main_box {
+  display: flex;
+  column-gap: 100px;
+}
+
+.HEADER h3 {
+  color: aqua;
+  margin-top: 155px;
+  margin-left: 100px;
+  position: absolute;
+  z-index: 999;
+}
+
+.box1 {
+  border: 2px solid aqua;
+  width: 25%;
+  height: 150px;
+  margin-top: 12%;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  color: rgb(136, 185, 190);
+  font-weight: 600;
+}
+
+.box1:hover,
+.HEADER:hover {
+  border: 1px solid rgb(136, 185, 190);
+  color: aqua;
+  transform: translate(60px) scale(1.1);
+  transition: ease 2.6s;
+}
+
+.main_box1 {
+  display: flex;
+  column-gap: 100px;
+  margin-left: 150px;
+}
+
+.HEADER1 h3 {
+  color: aqua;
+  margin-top: 120px;
+  margin-left: 100px;
+  position: absolute;
+  z-index: 999;
+}
+
+.box2 {
+  border: 2px solid aqua;
+  width: 27%;
+  height: 150px;
+  margin-top: 10%;
+
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  color: rgb(136, 185, 190);
+  font-weight: 600;
+}
+
+.box2:hover,
+.HEADER1:hover {
+  border: 1px solid rgb(136, 185, 190);
+  color: aqua;
+  transform: translate(50px) scale(1.1);
+  transition: ease 2.6s;
+}
+
+.box3 {
+  border: 2px solid aqua;
+  width: 27%;
+  height: 150px;
+  margin-top: 5%;
+  margin-left: 35%;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  color: rgb(136, 185, 190);
+  font-weight: 600;
+}
+
+.header2 h3 {
+  color: aqua;
+  margin-top: 0;
+  margin-left: 480px;
+  position: absolute;
+  z-index: 999;
+}
+
+.box3:hover,
+.header2:hover {
+  border: 1px solid rgb(136, 185, 190);
+  color: aqua;
+  transform: translate(60px) scale(1.1);
+  transition: ease 2.6s;
+}
+
+
+.btn1{   
+    position: absolute;
+    top: 180px;
+    right: 300px;
+     border-radius: 3px;
+     z-index: 999;
+  }
+  
+  button{
+    padding: 3px 20px;
+    border-style: none;
+    background-color: #28e2a7;
+    font-weight: 700;
+    border-radius: 3px;
+
+  }
+  .btn1 a{
+    text-decoration: none;
+    color: aqua;
+  }
+  
+ button:hover{
+    background-color: aqua;
+    transform: rotate(20deg);
+    transition: ease 1s;
+  }
+  
+   
