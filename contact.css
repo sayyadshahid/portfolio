@@ -16,14 +16,14 @@
 }
 
 .contact h1{
-  font-size: 2.1rem;
-  padding-bottom: 10px;
+  font-size: 2vw;
+  padding-bottom: 2vh;
   font-weight: 650;
   
 }
 
-.contactp{
-    font-size: 1.4rem;
+.contact p{
+    font-size: 1vw;
 }
 
 .card1{
@@ -31,15 +31,16 @@
     margin-left: 9%;
     
 }
- .addr .phone .mail, h3{
+ .addr h3, .phone h3, .mail h3{
+    font-size: 1.5vw;
   color: aqua;
   font-weight: 600;
 }
 
 .addr .phone .mail, p{
     color: white;
-    font-size: 14px;
-    margin-bottom: 30px;
+    font-size: 1vw;
+    margin-bottom: 5vh;
 }
 
 .flex{
@@ -50,43 +51,53 @@
 .card2{
     margin-top: 8%;
     margin-right: 15%;
-    border: 1px solid white;
-    width: 400px;
-    height: 300px;
+    border: 0.1vw solid white;
+    width: 28vw;
+    height: 40vh;
     align-content: center;
     background-color: white;
-    padding: 10px;
+    padding: 1vw;
+    position: relative;
 }
+
+ form{
+    background-color: white;
+ }
 
 .text{
  background-color: white;
  border: none;
- padding-right: 80px;
- padding-top: 6px;
- padding-bottom: 6px;
- margin-bottom: 20px;
- border-bottom: 1px solid gray;
+ outline: none;
+ padding-right: 8.5vw;
+ padding-top: 0.9vw;
+ padding-bottom: 0.9vw;
+ margin-bottom: 1.2vw;
+ border-bottom: 0.1vw solid gray;
 }
+
+
 .feed{
     background-color: white;
     border: none;
-    padding-right: 100px;
-    padding-top: 6px;
-    padding-bottom: 60px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid gray;
+    padding-right: 8.5vw;
+    padding-top: 1vw;
+    padding-bottom: 4vh;
+    margin-bottom: 1.2vw;
+    border-bottom: 0.1vw solid gray;
    }
+
+
 
 .card2 h4{
     color: gray;
-    padding-bottom: 10px;
-    font-size: 20px;
+    padding-bottom: 1vh;
+    font-size: 1.7vw;
     background-color: white;
 }
 
 .btn button{
     background-color: #05f2f2;
-    padding: 4px 20px;
+    padding: 0.4vh 1.4vw;
     color: #1f252f;
     cursor: pointer;
     border: none;
@@ -100,23 +111,19 @@
  }
  .scard2{
     background-color: white;
-    margin-left: 60px;
+    margin-left: 2.7vw;
     
  }
 
  /* .btn 1 */
 .btn1{
-    
-     
-     
-    position: absolute;
-    top: 300px;
-    left: 720px;
+     margin-top: 5vh;
+     margin-left: 5vw;
      border-radius: 3px;
   }
   
   button{
-    padding: 3px 20px;
+    padding: 0.4vh 1.4vw;
     border-style: none;
     background-color: #00abf0;
     font-weight: 700;
@@ -134,4 +141,54 @@
     transition: ease 1s;
   }
   
-   
+  @media (max-width: 768px) {
+    
+    .flex {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .card1, .card2 {
+      margin: 0;  
+      width: 90%;  
+      max-width: 500px; 
+    }
+  
+    .contact h1 {
+      font-size: 5vw; 
+    }
+  
+    .contact p {
+      font-size: 3vw;  
+    }
+  
+    .addr h3, .phone h3, .mail h3{
+        font-size: 3vw;
+       
+    }
+    .addr .phone .mail, p{
+         
+        font-size: 2vw;
+         
+    }
+
+
+    .card2 h4 {
+      font-size: 4vw;  
+    }
+  
+    .text, .feed {
+      font-size: 3vw;  
+    }
+  
+    .btn button {
+      
+      font-size: 4vw;  
+    }
+  
+    .btn1 {
+      position: static;  
+      margin-top: 20px;  
+    }
+  }
+  
