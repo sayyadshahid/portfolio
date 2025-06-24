@@ -36,7 +36,7 @@ const TechSkills = () => {
         sx={{ display: "flex", justifyContent: "center", mb: 6 }}
         data-aos="fade-down"
       >
-        <img src="/breaker.svg" alt="breaker" style={{ maxWidth: "200px" }} />
+        <img src="./breaker.svg" alt="breaker" style={{ maxWidth: "200px" }} />
       </Box>
       <Typography
         variant="h4"

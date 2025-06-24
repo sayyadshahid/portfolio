@@ -55,10 +55,10 @@ export default function Home() {
 
           <Box mt={4} sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
             <a href="https://github.com/sayyadshahid">
-              <img src="/git.svg" alt="GitHub" style={{ height: 40 }} />
+              <img src="./git.svg" alt="GitHub" style={{ height: 40 }} />
             </a>
             <a href="https://www.linkedin.com/in/shahid-sayyad-23a0bb331/?originalSubdomain=in">
-              <img src="/linked in.svg" alt="LinkedIn" style={{ height: 40 }} />
+              <img src="./linked in.svg" alt="LinkedIn" style={{ height: 40 }} />
             </a>
             <Button
               sx={{
