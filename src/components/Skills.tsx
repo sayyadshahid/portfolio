@@ -122,7 +122,7 @@ export default function MyExperience() {
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
         <img
-          src="/breaker.svg"
+          src="./breaker.svg"
           alt="breaker"
           style={{ maxWidth: "200px" }}
         />

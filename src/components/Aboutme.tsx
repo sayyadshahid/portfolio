@@ -50,7 +50,7 @@ export default function AboutMe() {
           <Box bgcolor={"grey"} sx={{ borderRadius: 4 }}>
             <Box
               component="img"
-              src="/shahid.jpeg"
+              src="./shahid.jpeg"
               alt="profile"
               sx={{
                 width: "100%",

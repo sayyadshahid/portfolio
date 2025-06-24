@@ -2,22 +2,22 @@ import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 
 const skills = [
-  { name: "HTML 5", img: "/skills/html.svg" },
-  { name: "Css", img: "/skills/css.svg" },
-  { name: "Bootstrap", img: "/skills/bootstrap.svg" },
-  { name: "Material UI", img: "/skills/mui.svg" },
-  { name: "jQuery", img: "/skills/jquery.svg" },
-  { name: "JavaScript", img: "/skills/js.svg" },
-  { name: "Type Script", img: "/skills/ts.svg" },
-  { name: "React", img: "/skills/react.svg" },
-  { name: "Next.JS", img: "/skills/next-js.svg" },
-  { name: "Python", img: "/skills/python-5.svg" },
-  { name: "FastApi", img: "/skills/fastapi-1.svg" },
-  { name: "Django", img: "/skills/django-community.svg" },
-  { name: "MongoDB", img: "/skills/mongo.svg" },
-  { name: "PostgreSQL", img: "/skills/postgresql.svg" },
-  { name: "Git", img: "/skills/Git.svg" },
-  { name: "Postman", img: "/skills/postman.svg" },
+  { name: "HTML 5", img: "./skills/html.svg" },
+  { name: "Css", img: "./skills/css.svg" },
+  { name: "Bootstrap", img: "./skills/bootstrap.svg" },
+  { name: "Material UI", img: "./skills/mui.svg" },
+  { name: "jQuery", img: "./skills/jquery.svg" },
+  { name: "JavaScript", img: "./skills/js.svg" },
+  { name: "Type Script", img: "./skills/ts.svg" },
+  { name: "React", img: "./skills/react.svg" },
+  { name: "Next.JS", img: "./skills/next-js.svg" },
+  { name: "Python", img: "./skills/python-5.svg" },
+  { name: "FastApi", img: "./skills/fastapi-1.svg" },
+  { name: "Django", img: "./skills/django-community.svg" },
+  { name: "MongoDB", img: "./skills/mongo.svg" },
+  { name: "PostgreSQL", img: "./skills/postgresql.svg" },
+  { name: "Git", img: "./skills/Git.svg" },
+  { name: "Postman", img: "./skills/postman.svg" },
 ];
 
 const TechSkills = () => {
