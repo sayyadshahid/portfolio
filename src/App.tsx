@@ -1,13 +1,14 @@
- 
-import { Box } from '@mui/material';
-import Portfolio from './page/Portfolio';
+import { Box } from "@mui/material";
+import Portfolio from "./page/Portfolio";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Box p= {0}>
-
-    <Portfolio/>
-    </Box>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+      </Routes>
+    </Router>
   );
 }
 
