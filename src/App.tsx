@@ -1,14 +1,14 @@
 import { Box } from "@mui/material";
 import Portfolio from "./page/Portfolio";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";  // ✅ Only use Routes and Route
 
 function App() {
   return (
-    <Router>
+    <Box>
       <Routes>
         <Route path="/" element={<Portfolio />} />
       </Routes>
-    </Router>
+    </Box>
   );
 }
 
