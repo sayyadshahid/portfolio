@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Paper,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Typography, Paper, useTheme, useMediaQuery } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 type Skill = {
@@ -22,18 +16,20 @@ const skills = {
   frontend: [
     { name: "HTML5", level: "Advanced" },
     { name: "CSS3", level: "Advanced" },
+    { name: "Material UI", level: "Advanced" },
+    { name: "Bootstrap", level: "Basic" },
     { name: "JavaScript", level: "Intermediate" },
+    { name: "Type Script", level: "Intermediate" },
+    { name: "Jquery", level: "Basic" },
     { name: "React", level: "Advanced" },
     { name: "Next.js", level: "Basic" },
-    { name: "Material UI", level: "Advanced" },
-    { name: "Jquery", level: "Basic" },
-    { name: "Type Script", level: "Intermediate" },
   ],
   backend: [
     { name: "Python", level: "Advanced" },
-    { name: "Python FastApi", level: "Advanced" },
+    { name: "FastApi", level: "Advanced" },
+    { name: "Django", level: "Basic" },
     { name: "Rest Api", level: "Intermediate" },
-    { name: "PostgreSQL Databases", level: "Intermediate" },
+    { name: "PostgreSQL", level: "Intermediate" },
     { name: "MongoDB", level: "Intermediate" },
   ],
 };
@@ -121,11 +117,7 @@ export default function MyExperience() {
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
-        <img
-          src="./breaker.svg"
-          alt="breaker"
-          style={{ maxWidth: "200px" }}
-        />
+        <img src="./breaker.svg" alt="breaker" style={{ maxWidth: "200px" }} />
       </Box>
 
       <Typography variant="overline" sx={{ color: "GREY", letterSpacing: 2 }}>

@@ -112,7 +112,7 @@ export default function AboutMe() {
               },
               {
                 icon: <Person fontSize="large" sx={{ color: "grey", mb: 1 }} />,
-                title: "Portfolio",
+                title: "Projects",
                 desc: "2+ Completed",
               },
             ].map((card, idx) => (
@@ -126,7 +126,11 @@ export default function AboutMe() {
                   borderRadius: 3,
                   textAlign: "center",
                   width: { xs: "100%", sm: 200 },
+                  height: { sm: idx === 1 ? 180 : 150 },  
                   transition: "all 0.6s ease",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
                   ":hover": {
                     boxShadow: 6,
                     transform: "scale(1.05)",
@@ -144,7 +148,7 @@ export default function AboutMe() {
             ))}
           </Box>
 
-          {/* About Description */}
+          
           <Typography
             variant="body1"
             sx={{
