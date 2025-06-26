@@ -126,7 +126,7 @@ export default function Footer() {
           fontSize: { xs: "0.8rem", sm: "1rem" }, // Adjusted font size on smaller screens
         }}
       >
-        © 2022 Shahid Sayyad | All rights reserved.
+        © 2025 Shahid Sayyad | All rights reserved.
       </Typography>
     </Box>
   );
