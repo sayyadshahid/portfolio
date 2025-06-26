@@ -1,4 +1,10 @@
-import { Box, Button, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Nav from "./Nav";
 
 export default function Home() {
@@ -6,7 +12,7 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box position="relative" height="100vh" width="100%" overflow="hidden" >
+    <Box position="relative" height="100vh" width="100%" overflow="hidden">
       <Nav />
 
       {/* Left Section (Main Content) */}
@@ -58,20 +64,26 @@ export default function Home() {
               <img src="./git.svg" alt="GitHub" style={{ height: 40 }} />
             </a>
             <a href="https://www.linkedin.com/in/shahid-sayyad-23a0bb331/?originalSubdomain=in">
-              <img src="./linked in.svg" alt="LinkedIn" style={{ height: 40 }} />
+              <img
+                src="./linked in.svg"
+                alt="LinkedIn"
+                style={{ height: 40 }}
+              />
             </a>
-            <Button
-              sx={{
-                color: "white",
-                bgcolor: "black",
-                borderRadius: 10,
-                height: 50,
-                fontWeight: 600,
-                px: 3,
-              }}
-            >
-              Download CV
-            </Button>
+            <a href="./shahid CV.pdf">
+              <Button
+                sx={{
+                  color: "white",
+                  bgcolor: "black",
+                  borderRadius: 10,
+                  height: 50,
+                  fontWeight: 600,
+                  px: 3,
+                }}
+              >
+                Download CV
+              </Button>
+            </a>
           </Box>
         </Box>
       </Box>
