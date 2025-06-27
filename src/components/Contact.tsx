@@ -52,7 +52,7 @@ export default function Contact() {
           >
             {/* Email */}
             <Paper
-              data-aos="fade-right"
+              data-aos="fade-down"
               elevation={0}
               sx={{
                 bgcolor: "transparent",
@@ -84,7 +84,7 @@ export default function Contact() {
 
             {/* WhatsApp */}
             <Paper
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-delay="150"
               elevation={0}
               sx={{
@@ -118,7 +118,7 @@ export default function Contact() {
 
           {/* Right: Contact Form */}
           <Box
-            data-aos="fade-left"
+            data-aos="fade-down"
             sx={{
               flex: 2,
               display: "flex",
