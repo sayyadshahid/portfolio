@@ -59,18 +59,46 @@ export default function Home() {
             FullStack Developer
           </Typography>
 
-          <Box mt={4} sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-            <a href="https://github.com/sayyadshahid">
+          <Box
+            mt={4}
+            sx={{
+              display: "flex",
+              gap: 3,
+              flexWrap: "wrap",
+              alignItems: "center", // ✅ vertically centers items
+              justifyContent: { xs: "center", md: "flex-start" }, // responsive alignment
+            }}
+          >
+            {/* GitHub */}
+            <a
+              href="https://github.com/sayyadshahid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./git.svg" alt="GitHub" style={{ height: 40 }} />
             </a>
-            <a href="https://www.linkedin.com/in/shahid-sayyad-23a0bb331/?originalSubdomain=in">
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/shahid-sayyad-23a0bb331/?originalSubdomain=in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="./linked in.svg"
                 alt="LinkedIn"
                 style={{ height: 40 }}
               />
             </a>
-            <a href="./shahid CV.pdf">
+
+            {/* Download CV */}
+            <a
+              href="./shahid CV.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }} // ✅ removes underline
+            >
               <Button
                 sx={{
                   color: "white",
@@ -79,6 +107,9 @@ export default function Home() {
                   height: 50,
                   fontWeight: 600,
                   px: 3,
+                  "&:hover": {
+                    bgcolor: "#333",
+                  },
                 }}
               >
                 Download CV

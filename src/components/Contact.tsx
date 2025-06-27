@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography, Button, TextField, Paper, Link } from "@mui/material";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function Contact() {
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    const leftElements = document.querySelectorAll('[data-aos-id="left"]');
+    const rightElements = document.querySelectorAll('[data-aos-id="right"]');
+
+    leftElements.forEach((el) => {
+      el.setAttribute("data-aos", isMobile ? "fade-up" : "fade-right");
+    });
+
+    rightElements.forEach((el) => {
+      el.setAttribute("data-aos", isMobile ? "fade-up" : "fade-left");
+    });
+  }, []);
+
   return (
     <Box
       id="contact"
       sx={{
         background: "radial-gradient(circle, #f1f1f1 0%, #D7D7D7 100%)",
         minHeight: "100vh",
+        overflowX: "hidden", // ✅ Prevent horizontal scroll
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
@@ -52,7 +68,8 @@ export default function Contact() {
           >
             {/* Email */}
             <Paper
-              data-aos="fade-down"
+              data-aos-id="left"
+              data-aos="fade-right"
               elevation={0}
               sx={{
                 bgcolor: "transparent",
@@ -84,7 +101,8 @@ export default function Contact() {
 
             {/* WhatsApp */}
             <Paper
-              data-aos="fade-up"
+              data-aos-id="left"
+              data-aos="fade-right"
               data-aos-delay="150"
               elevation={0}
               sx={{
@@ -118,7 +136,8 @@ export default function Contact() {
 
           {/* Right: Contact Form */}
           <Box
-            data-aos="fade-down"
+            data-aos-id="right"
+            data-aos="fade-left"
             sx={{
               flex: 2,
               display: "flex",
