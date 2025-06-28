@@ -13,6 +13,9 @@ import AllPortfolio from "../components/Portfolios";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+// Import your bottom navigation component
+import PortfolioBottomNav from "../components/BottomNav"; // Adjust the path as needed
+
 export default function Portfolio() {
   useEffect(() => {
     AOS.init({
@@ -22,36 +25,34 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <Box sx={{ bgcolor: "#D7D7D7" }}>
-      {/* No AOS for hero section */}
-      <Home />
-      <Box data-aos="fade-up">
-        <AboutSection />
+    <>
+      <Box sx={{ bgcolor: "#D7D7D7" }}>
+        {/* No AOS for hero section */}
+        <Home />
+        <Box data-aos="fade-up">
+          <AboutSection />
+        </Box>
+        <Box data-aos="fade-up">
+          <AboutMe />
+        </Box>
+        <Box data-aos="fade-up">
+          <MyExperience />
+        </Box>
+        <Box data-aos="zoom-in-up">
+          <TechSkills />
+        </Box>
+        <Box data-aos="fade-up">
+          <AllPortfolio />
+        </Box>
+        <Box data-aos="fade-up">
+          <Contact />
+        </Box>
+        <Box data-aos="fade-up">
+          <Footer />
+        </Box>
+      <PortfolioBottomNav />
       </Box>
-
-      <Box data-aos="fade-up">
-        <AboutMe />
-      </Box>
-
-      <Box data-aos="fade-up">
-        <MyExperience />
-      </Box>
-
-      <Box data-aos="zoom-in-up">
-        <TechSkills />
-      </Box>
-
-      <Box data-aos="fade-up">
-        <AllPortfolio />
-      </Box>
-
-      <Box data-aos="fade-up">
-        <Contact />
-      </Box>
-      <Box data-aos="fade-up">
-        <Footer />
-      </Box>
-    </Box>
+      {/* Add your fixed bottom navigation here */}
+    </>
   );
 }
-// hey

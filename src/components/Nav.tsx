@@ -21,7 +21,7 @@ export default function Nav() {
 
   const navItems = [
     { label: "About Me", href: "#about" },
-    { label: "Experience", href: "#experience" },
+    { label: "Experience", href: "#exp" },
     { label: "Portfolio", href: "#portfolio" },
     { label: "Contact", href: "#contact" },
   ];
@@ -29,6 +29,7 @@ export default function Nav() {
   return (
     <>
       <Paper
+      id="home"
         sx={{
           position: "absolute",
           top: 4,

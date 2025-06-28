@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 export default function AboutSection() {
   return (
     <Box
-      id="about"
+     
       sx={{
         backgroundColor: "#1a1a1a",
         color: "#ffffff",

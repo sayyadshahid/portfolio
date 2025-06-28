@@ -115,6 +115,7 @@ export default function MyExperience() {
         py: 10,
         textAlign: "center",
       }}
+      id="exp"
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
         <img src={`${process.env.PUBLIC_URL}/breaker.svg`} alt="breaker" style={{ maxWidth: "200px" }} />
