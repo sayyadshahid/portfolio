@@ -45,7 +45,7 @@ export default function Nav() {
       >
         {/* Logo */}
         <Box>
-          <img src="./logo.svg" alt="Logo" style={{ height: 40 }} />
+          <img src={`${process.env.PUBLIC_URL}/logo.svg`} alt="Logo" style={{ height: 40 }} />
         </Box>
 
         {/* Desktop Nav */}

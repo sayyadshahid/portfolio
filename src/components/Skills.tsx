@@ -117,7 +117,7 @@ export default function MyExperience() {
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
-        <img src="./breaker.svg" alt="breaker" style={{ maxWidth: "200px" }} />
+        <img src={`${process.env.PUBLIC_URL}/breaker.svg`} alt="breaker" style={{ maxWidth: "200px" }} />
       </Box>
 
       <Typography variant="overline" sx={{ color: "GREY", letterSpacing: 2 }}>

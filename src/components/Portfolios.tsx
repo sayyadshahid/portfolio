@@ -25,7 +25,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 const Cards = [
   {
-    image: "./hospital managment.png",
+    image: `${process.env.PUBLIC_URL}/hospital managment.png`,
     title: "Hospital Management (Full Stack)",
     Description:
       "A web-based Hospital Management System with multi-hospital support, secure panels, and AI chatbot integration for streamlined operations.",
@@ -33,7 +33,7 @@ const Cards = [
     demo: "https://hospital-managment-dynamic-web-app-shahids-projects-7019af7c.vercel.app/",
   },
   {
-    image: "./yazdaan.png",
+    image: `${process.env.PUBLIC_URL}/yazdaan.png`,
     title: "Yazdaan Academic (Full Stack)",
     Description:
       "Yazdaan Academy is a web-based e-learning platform built at Fladdra Technologies, developed by me, featuring course sales, lecture access, and a secure admin panel.",
@@ -41,7 +41,7 @@ const Cards = [
     demo: "https://yazdaan-academy.vercel.app/aboutus",
   },
   {
-    image: "./pokdex.png",
+    image: `${process.env.PUBLIC_URL}/pokdex.png`,
     title: "Pokedex (FrontEnd)",
     Description:
       "A web-based Hospital Management System with multi-hospital support, secure panels, and AI chatbot integration for streamlined operations.",
@@ -67,7 +67,7 @@ export default function AllPortfolio() {
         sx={{ display: "flex", justifyContent: "center", mb: 6 }}
         data-aos="fade-down"
       >
-        <img src="./breaker.svg" alt="breaker" style={{ maxWidth: "200px" }} />
+        <img src={`${process.env.PUBLIC_URL}/breaker.svg`} alt="breaker" style={{ maxWidth: "200px" }} />
       </Box>
 
       <Typography

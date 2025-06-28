@@ -22,6 +22,7 @@ export default function Home() {
           width: "100%",
           height: "100%",
           display: "flex",
+
           alignItems: "center",
           px: { xs: 2, md: 5 },
         }}
@@ -75,7 +76,11 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./git.svg" alt="GitHub" style={{ height: 40 }} />
+              <img
+                src={`${process.env.PUBLIC_URL}/git.svg`}
+                alt="GitHub"
+                style={{ height: 40 }}
+              />
             </a>
 
             {/* LinkedIn */}
@@ -85,7 +90,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <img
-                src="./linked in.svg"
+                src={`${process.env.PUBLIC_URL}/linked in.svg`}
                 alt="LinkedIn"
                 style={{ height: 40 }}
               />
@@ -135,7 +140,22 @@ export default function Home() {
             justifyContent: "center",
             alignItems: "center",
           }}
-        />
+        >
+          <Box data-aos="fade-left">
+            <Box>
+              <img
+                 src={`${process.env.PUBLIC_URL}/shah.jpg`}
+                alt="Shahid Sayyad"
+                style={{
+                  maxHeight: 600,
+                  marginRight: 600,
+                  transform: "rotate(-10deg)",
+                  filter: "drop-shadow(0px 8px 20px rgba(44, 44, 44, 0.596))",
+                }}
+              />
+            </Box>
+          </Box>
+        </Box>
       )}
     </Box>
   );

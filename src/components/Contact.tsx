@@ -30,7 +30,7 @@ export default function Contact() {
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
         <img
-          src="./breaker.svg"
+          src={`${process.env.PUBLIC_URL}/breaker.svg`}
           alt="breaker"
           style={{ maxWidth: "200px" }}
           data-aos="fade-down"

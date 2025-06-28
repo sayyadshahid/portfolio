@@ -2,22 +2,22 @@ import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 
 const skills = [
-  { name: "HTML 5", img: "./skills/html.svg" },
-  { name: "Css", img: "./skills/css.svg" },
-  { name: "Bootstrap", img: "./skills/bootstrap.svg" },
-  { name: "Material UI", img: "./skills/mui.svg" },
-  { name: "jQuery", img: "./skills/jquery.svg" },
-  { name: "JavaScript", img: "./skills/js.svg" },
-  { name: "Type Script", img: "./skills/ts.svg" },
-  { name: "React", img: "./skills/react.svg" },
-  { name: "Next.JS", img: "./skills/next-js.svg" },
-  { name: "Python", img: "./skills/python-5.svg" },
-  { name: "FastApi", img: "./skills/fastapi-1.svg" },
-  { name: "Django", img: "./skills/django-community.svg" },
-  { name: "MongoDB", img: "./skills/mongo.svg" },
-  { name: "PostgreSQL", img: "./skills/postgresql.svg" },
-  { name: "Git", img: "./skills/Git.svg" },
-  { name: "Postman", img: "./skills/postman.svg" },
+  { name: "HTML 5", img: `${process.env.PUBLIC_URL}/skills/html.svg` },
+  { name: "Css", img: `${process.env.PUBLIC_URL}/skills/css.svg` },
+  { name: "Bootstrap", img: `${process.env.PUBLIC_URL}/skills/bootstrap.svg` },
+  { name: "Material UI", img: `${process.env.PUBLIC_URL}/skills/mui.svg` },
+  { name: "jQuery", img: `${process.env.PUBLIC_URL}/skills/jquery.svg` },
+  { name: "JavaScript", img: `${process.env.PUBLIC_URL}/skills/js.svg` },
+  { name: "Type Script", img: `${process.env.PUBLIC_URL}/skills/ts.svg` },
+  { name: "React", img: `${process.env.PUBLIC_URL}/skills/react.svg` },
+  { name: "Next.JS", img: `${process.env.PUBLIC_URL}/skills/next-js.svg` },
+  { name: "Python", img: `${process.env.PUBLIC_URL}/skills/python-5.svg` },
+  { name: "FastApi", img: `${process.env.PUBLIC_URL}/skills/fastapi-1.svg`},
+  { name: "Django", img: `${process.env.PUBLIC_URL}/skills/django-community.svg` },
+  { name: "MongoDB", img: `${process.env.PUBLIC_URL}/skills/mongo.svg` },
+  { name: "PostgreSQL", img: `${process.env.PUBLIC_URL}/skills/postgresql.svg` },
+  { name: "Git", img: `${process.env.PUBLIC_URL}/skills/Git.svg` },
+  { name: "Postman", img: `${process.env.PUBLIC_URL}/skills/postman.svg` },
 ];
 
 const TechSkills = () => {
@@ -36,7 +36,7 @@ const TechSkills = () => {
         sx={{ display: "flex", justifyContent: "center", mb: 6 }}
         data-aos="fade-down"
       >
-        <img src="./breaker.svg" alt="breaker" style={{ maxWidth: "200px" }} />
+        <img src={`${process.env.PUBLIC_URL}/breaker.svg`} alt="breaker" style={{ maxWidth: "200px" }} />
       </Box>
       <Typography
         variant="h4"
