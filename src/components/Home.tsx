@@ -150,7 +150,7 @@ export default function Home() {
                   maxHeight: 600,
                   marginRight: 600,
                   transform: "rotate(-10deg)",
-                  filter: "drop-shadow(0px 8px 20px rgba(44, 44, 44, 0.596))",
+                  filter: "drop-shadow(1px 8px 20px #252525",
                 }}
               />
             </Box>
