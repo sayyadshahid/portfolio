@@ -25,12 +25,15 @@ const navLinks = [
   { label: "About", icon: <InfoIcon />, href: "#about" },
   { label: "Experience", icon: <WorkIcon />, href: "#experience" },
   { label: "Portfolio", icon: <FolderIcon />, href: "#portfolio" },
-  { label: "Contact", icon: <ContactMailIcon />, href: "#contact" },
+  // { label: "Contact", icon: <ContactMailIcon />, href: "#contact" },
 ];
 
 const socialLinks = [
   { icon: <GitHubIcon />, href: "https://github.com/sayyadshahid" },
-  { icon: <LinkedInIcon />, href: "https://www.linkedin.com/in/shahid-sayyad-23a0bb331/?originalSubdomain=in" },
+  {
+    icon: <LinkedInIcon />,
+    href: "https://www.linkedin.com/in/shahid-sayyad-23a0bb331/?originalSubdomain=in",
+  },
   { icon: <InstagramIcon />, href: "#" },
 ];
 
@@ -51,7 +54,7 @@ export default function Footer() {
         pb: 10,
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40,
-        maxHeight: "200px",
+        maxHeight: "270px",
         position: "relative",
       }}
       component="footer"

@@ -22,7 +22,14 @@ function PortfolioBottomNav() {
   const handleNavigation = (newValue: any) => {
     setValue(newValue);
 
-    const sectionIds = ["home", "about", "skills", "portfolio", "exp", "contact"];
+    const sectionIds = [
+      "home",
+      "about",
+      "skills",
+      "portfolio",
+      "exp",
+      "contact",
+    ];
     const sectionId = sectionIds[newValue];
 
     const targetElement = document.getElementById(sectionId);
@@ -30,27 +37,26 @@ function PortfolioBottomNav() {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
-
   const renderNavAction = (index: number, icon: JSX.Element) => (
     <BottomNavigationAction
       icon={
         <Box
           sx={{
-            width: isMobile ? 38 : 45,
-            height: isMobile ? 38 : 45,
+            width: isMobile ? 30 : 34,
+            height: isMobile ? 30 : 34,
             borderRadius: "50%",
             bgcolor: value === index ? "#3b3b3bea" : "transparent",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backdropFilter: value === index ? "blur(8px)" : "none",
+            backdropFilter: value === index ? "blur(6px)" : "none",
             transition: "all 0.3s ease-in-out",
           }}
         >
           {React.cloneElement(icon, {
             style: {
               color: value === index ? "#ffffff" : "#706e6e",
-              fontSize: isMobile ? 20 : 24,
+              fontSize: isMobile ? 18 : 20,
             },
           })}
         </Box>
@@ -62,30 +68,30 @@ function PortfolioBottomNav() {
     <>
       <Box sx={{ paddingBottom: "0px" }} />
 
-      <Paper
-        sx={{
-          position: "fixed",
-          left: "50%",
-          transform: "translateX(-50%)",
-          bottom: 16,
-          zIndex: 1000,
-          borderRadius: 10,
-          px: isMobile ? 1 : 3,
-          py: 0.5,
-          bgcolor: "rgba(100, 100, 100, 0.15)",
-          boxShadow: 3,
-          width: isMobile ? "90%" : "auto",
-          minWidth: isMobile ? "unset" : 350,
-          maxWidth: "95vw",
-          display: "flex",
-          justifyContent: "center",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          transition: "all 0.3s ease-in-out",
-        }}
-        elevation={5}
-      >
+<Paper
+  sx={{
+    position: "fixed",
+    left: "50%",
+    transform: "translateX(-50%)",
+    bottom: 12,
+    zIndex: 1000,
+    borderRadius: 6,
+    px: isMobile ? 1 : 2,
+    py: 0.1, // smaller padding
+    bgcolor: "rgba(100, 100, 100, 0.12)",
+    boxShadow: 2,
+    width: isMobile ? "92%" : "auto",
+    maxWidth: "95vw",
+    display: "flex",
+    justifyContent: "center",
+    backdropFilter: "blur(8px)",
+    WebkitBackdropFilter: "blur(8px)",
+    border: "1px solid rgba(255, 255, 255, 0.15)",
+    transition: "all 0.3s ease-in-out",
+  }}
+  elevation={3}
+>
+
         <BottomNavigation
           value={value}
           onChange={(event, newValue) => handleNavigation(newValue)}

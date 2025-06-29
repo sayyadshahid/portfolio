@@ -12,7 +12,7 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box position="relative" height="100vh" width="100%" overflow="hidden">
+    <Box position="relative" height={!isMobile? "100vh" : "auto"} width="100%" overflow="hidden">
       <Nav />
 
       {/* Left Section (Main Content) */}
@@ -20,7 +20,7 @@ export default function Home() {
         sx={{
           backgroundColor: "#D7D7D7",
           width: "100%",
-          height: "100%",
+          height: isMobile ? "100vh" : "100%",
           display: "flex",
 
           alignItems: "center",
@@ -125,7 +125,7 @@ export default function Home() {
       </Box>
 
       {/* Right Section (Rotated Overlay - only on desktop) */}
-      {!isMobile && (
+      {!isMobile ? (
         <Box
           sx={{
             backgroundColor: "#000000",
@@ -144,7 +144,7 @@ export default function Home() {
           <Box data-aos="fade-left">
             <Box>
               <img
-                 src={`${process.env.PUBLIC_URL}/shah.jpg`}
+                src={`${process.env.PUBLIC_URL}/shah.jpg`}
                 alt="Shahid Sayyad"
                 style={{
                   maxHeight: 600,
@@ -154,6 +154,29 @@ export default function Home() {
                 }}
               />
             </Box>
+          </Box>
+        </Box>
+      ) : (
+        <Box
+          sx={{
+            backgroundColor: "#000000",
+            width: "100%",
+            p: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box data-aos="fade-left">
+            <img
+              src={`${process.env.PUBLIC_URL}/shah.jpg`}
+              alt="Shahid Sayyad"
+              style={{
+                width: 350,
+                borderRadius: 10,
+                filter: "drop-shadow(1px 8px 20px #252525",
+              }}
+            />
           </Box>
         </Box>
       )}

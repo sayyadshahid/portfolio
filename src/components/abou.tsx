@@ -1,14 +1,16 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 export default function AboutSection() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
-     
       sx={{
         backgroundColor: "#1a1a1a",
         color: "#ffffff",
         px: { xs: 3, md: 10 },
         py: { xs: 6, md: 10 },
+        mt: isMobile ? "2px" : "0px",
       }}
     >
       {/* Section Title */}
@@ -33,11 +35,15 @@ export default function AboutSection() {
           fontSize: { xs: 16, md: 18 },
         }}
       >
-        Hi, I'm <strong>Sayyed Shahid</strong>, a passionate and self-driven web developer.
-        This portfolio website showcases my skills, creativity, and dedication toward
-        building modern, responsive web applications. I specialize in both frontend and backend development, and I enjoy turning ideas into functional, user-friendly websites.
-        <br /><br />
-        This portfolio project is designed and coded by me to highlight my work, skills, and the journey I'm on as a developer.
+        Hi, I'm <strong>Sayyed Shahid</strong>, a passionate and self-driven web
+        developer. This portfolio website showcases my skills, creativity, and
+        dedication toward building modern, responsive web applications. I
+        specialize in both frontend and backend development, and I enjoy turning
+        ideas into functional, user-friendly websites.
+        <br />
+        <br />
+        This portfolio project is designed and coded by me to highlight my work,
+        skills, and the journey I'm on as a developer.
       </Typography>
 
       {/* Read More Button */}
