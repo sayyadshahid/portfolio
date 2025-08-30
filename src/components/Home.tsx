@@ -12,7 +12,12 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box position="relative" height={!isMobile? "100vh" : "auto"} width="100%" overflow="hidden">
+    <Box
+      position="relative"
+      height={!isMobile ? "100vh" : "auto"}
+      width="100%"
+      overflow="hidden"
+    >
       <Nav />
 
       {/* Left Section (Main Content) */}
@@ -102,7 +107,7 @@ export default function Home() {
               download
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textDecoration: "none" }} // ✅ removes underline
+              style={{ textDecoration: "none" }}
             >
               <Button
                 sx={{
@@ -141,7 +146,7 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          <Box data-aos="fade-left">
+          {/* <Box data-aos="fade-left">
             <Box>
               <img
                 src={`${process.env.PUBLIC_URL}/shah.jpg`}
@@ -154,31 +159,10 @@ export default function Home() {
                 }}
               />
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       ) : (
-        <Box
-          sx={{
-            backgroundColor: "#000000",
-            width: "100%",
-            p: 1,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Box data-aos="fade-left">
-            <img
-              src={`${process.env.PUBLIC_URL}/shah.jpg`}
-              alt="Shahid Sayyad"
-              style={{
-                width: 350,
-                borderRadius: 10,
-                filter: "drop-shadow(1px 8px 20px #252525",
-              }}
-            />
-          </Box>
-        </Box>
+        <Box></Box>
       )}
     </Box>
   );

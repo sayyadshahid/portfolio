@@ -31,6 +31,7 @@ const Cards = [
       "A web-based Hospital Management System with multi-hospital support, secure panels, and AI chatbot integration for streamlined operations.",
     git: "https://github.com/sayyadshahid/Hospital-managment-dynamic-web-app",
     demo: "https://hospital-managment-dynamic-web-app-shahids-projects-7019af7c.vercel.app/",
+    bgcolor: "#fff",
   },
   {
     image: `${process.env.PUBLIC_URL}/yazdaan.png`,
@@ -38,7 +39,8 @@ const Cards = [
     Description:
       "Yazdaan Academy is a web-based e-learning platform built at Fladdra Technologies, developed by me, featuring course sales, lecture access, and a secure admin panel.",
     git: "#contact",
-    demo: "https://yazdaan-academy.vercel.app/aboutus",
+    demo: "https://yazdaan-academy.vercel.app/",
+    bgcolor: "#1b2b30",
   },
   {
     image: `${process.env.PUBLIC_URL}/pokdex.png`,
@@ -47,8 +49,27 @@ const Cards = [
       "A web-based Hospital Management System with multi-hospital support, secure panels, and AI chatbot integration for streamlined operations.",
     git: "https://github.com/sayyadshahid/POKEDEX",
     demo: "https://pokedex-ochre-nine.vercel.app/",
+    bgcolor: "#0a131d",
+  },
+  {
+    image: `${process.env.PUBLIC_URL}/clouds.png`,
+    title: "Clouds Networking (Full Stack)",
+    Description:
+      "Built a full-stack cloud service platform with React, FastAPI, and PostgreSQL, including user/admin panels, APIs for courses, syllabus, auth, feedback, blogs, and email integration.",
+    git: "#contact",
+    demo: "https://cloudsnetworking.in/",
+    bgcolor: "#fff",
   },
 
+  {
+    image: `${process.env.PUBLIC_URL}/alhaq.png`,
+    title: "Alhaq ",
+    Description:
+      "Developed a Learning Management System for Alhaq Institute using React with a responsive UI and admin panel for courses, lectures, and student data; backend remains incomplete due to client constraints.",
+    git: "#contact",
+    demo: "https://www.alhaqinstitute.com/",
+    bgcolor: "#fff",
+  },
 ];
 
 export default function AllPortfolio() {
@@ -67,7 +88,11 @@ export default function AllPortfolio() {
         sx={{ display: "flex", justifyContent: "center", mb: 6 }}
         data-aos="fade-down"
       >
-        <img src={`${process.env.PUBLIC_URL}/breaker.svg`} alt="breaker" style={{ maxWidth: "200px" }} />
+        <img
+          src={`${process.env.PUBLIC_URL}/breaker.svg`}
+          alt="breaker"
+          style={{ maxWidth: "200px" }}
+        />
       </Box>
 
       <Typography
@@ -87,9 +112,11 @@ export default function AllPortfolio() {
 
       <Box
         sx={{
-          display: "grid",
-          gap: 4,
-          gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "1fr 1fr 1fr" },
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center", // centers horizontally
+          gap: 3, // space between cards
+          mt: 4,
         }}
       >
         {Cards.map((c, i) => (
@@ -98,25 +125,28 @@ export default function AllPortfolio() {
             data-aos="fade-up"
             data-aos-delay={i * 150}
             sx={{
-              minWidth: 300,
+              width: 350,
+              height: 500,
               borderRadius: 4,
               p: 1,
               bgcolor: "rgba(255, 255, 255, 0.1)",
               backdropFilter: "blur(10px)",
               WebkitBackdropFilter: "blur(10px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <CardMedia
               component="img"
-              height="250"
               image={c.image}
               alt={c.title}
               sx={{
                 borderTopLeftRadius: "8px",
                 borderTopRightRadius: "8px",
-                objectFit: "contain",
-                backgroundColor: "#fff",
+                objectFit: "contain", // keeps ratio, crops overflow
+                backgroundColor: c.bgcolor,
+                height: 200,
               }}
             />
 
@@ -139,7 +169,7 @@ export default function AllPortfolio() {
                   target="_blank"
                   sx={{
                     width: "auto",
-                    padding: "10px 20px",
+                    px: 3,
                     fontWeight: 600,
                     bgcolor: "black",
                     color: "white",
@@ -154,7 +184,7 @@ export default function AllPortfolio() {
                   target="_blank"
                   sx={{
                     width: "auto",
-                    padding: "10px 15px",
+                    px: 2,
                     fontWeight: 600,
                     borderRadius: 10,
                     borderColor: "black",

@@ -103,7 +103,7 @@ export default function AboutMe() {
               {
                 icon: <Work fontSize="large" sx={{ color: "grey", mb: 1 }} />,
                 title: "Experience",
-                desc: "6+ months of Working as Intern",
+                desc: "8+ months of Working",
               },
               {
                 icon: <School fontSize="large" sx={{ color: "grey", mb: 1 }} />,
@@ -113,7 +113,7 @@ export default function AboutMe() {
               {
                 icon: <Person fontSize="large" sx={{ color: "grey", mb: 1 }} />,
                 title: "Projects",
-                desc: "2+ Completed",
+                desc: "5+ Completed",
               },
             ].map((card, idx) => (
               <Card
