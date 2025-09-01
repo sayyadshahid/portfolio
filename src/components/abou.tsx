@@ -70,7 +70,7 @@ export default function AboutSection() {
             mx: 1,
           }}
         >
-          READ MORE
+          This Is About Me
         </Typography>
       </Box>
     </Box>

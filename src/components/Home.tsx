@@ -6,6 +6,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Nav from "./Nav";
+import EarthCanvas from "./canvas/EarthCanvas";
 
 export default function Home() {
   const theme = useTheme();
@@ -130,7 +131,9 @@ export default function Home() {
       </Box>
 
       {/* Right Section (Rotated Overlay - only on desktop) */}
+      {/* Right Section (Rotated Overlay - only on desktop) */}
       {!isMobile ? (
+        // Desktop version (with rotated overlay)
         <Box
           sx={{
             backgroundColor: "#000000",
@@ -146,23 +149,43 @@ export default function Home() {
             alignItems: "center",
           }}
         >
-          {/* <Box data-aos="fade-left">
-            <Box>
-              <img
-                src={`${process.env.PUBLIC_URL}/shah.jpg`}
-                alt="Shahid Sayyad"
-                style={{
-                  maxHeight: 600,
-                  marginRight: 600,
-                  transform: "rotate(-10deg)",
-                  filter: "drop-shadow(1px 8px 20px #252525",
-                }}
-              />
-            </Box>
-          </Box> */}
+          <Box
+            sx={{
+              width: "600px",
+              height: "600px",
+              transform: "rotate(-10deg)",
+              mr: 65,
+            }}
+          >
+            <EarthCanvas />
+          </Box>
         </Box>
       ) : (
-        <Box></Box>
+        // ✅ Mobile version
+        <Box
+          sx={{
+            width: "100%",
+            height: "100vh", // ✅ full screen height
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center", // ✅ vertical + horizontal center
+            backgroundColor: "#000", // optional
+            borderRadius: '5%'
+          }}
+        >
+          <Box
+            sx={{
+              width: "300px", // smaller size for mobile
+              height: "300px",
+              transform: "rotate(-10deg)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <EarthCanvas />
+          </Box>
+        </Box>
       )}
     </Box>
   );
