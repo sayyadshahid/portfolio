@@ -130,8 +130,7 @@ export default function Home() {
         </Box>
       </Box>
 
-      {/* Right Section (Rotated Overlay - only on desktop) */}
-      {/* Right Section (Rotated Overlay - only on desktop) */}
+       
       {!isMobile ? (
         // Desktop version (with rotated overlay)
         <Box
@@ -161,26 +160,26 @@ export default function Home() {
           </Box>
         </Box>
       ) : (
-        // ✅ Mobile version
+       
         <Box
           sx={{
             width: "100%",
-            height: "100vh", // ✅ full screen height
+            height: "100vh", 
             display: "flex",
             justifyContent: "center",
-            alignItems: "center", // ✅ vertical + horizontal center
+            alignItems: "center", 
             backgroundColor: "#000", // optional
-            borderRadius: '5%'
           }}
         >
           <Box
             sx={{
-              width: "300px", // smaller size for mobile
-              height: "300px",
+              width: "440px",  
+              height: "440px",
               transform: "rotate(-10deg)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              mr: 10
             }}
           >
             <EarthCanvas />
