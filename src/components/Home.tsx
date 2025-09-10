@@ -130,7 +130,7 @@ export default function Home() {
         </Box>
       </Box>
 
-       
+
       {!isMobile ? (
         // Desktop version (with rotated overlay)
         <Box
@@ -160,20 +160,32 @@ export default function Home() {
           </Box>
         </Box>
       ) : (
-       
+
+<>
+         <Box sx={{
+           width: '45%',
+           height: '100vh',
+           position: 'absolute',
+           bgcolor: 'transparent',
+           zIndex: 1,
+           ml: '60%'
+          }}>
+            
+          </Box>
         <Box
           sx={{
             width: "100%",
-            height: "100vh", 
+            height: "100vh",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center", 
+            alignItems: "center",
             backgroundColor: "#000", // optional
           }}
-        >
+          >
+         
           <Box
             sx={{
-              width: "440px",  
+              width: "440px",
               height: "440px",
               transform: "rotate(-10deg)",
               display: "flex",
@@ -181,10 +193,11 @@ export default function Home() {
               alignItems: "center",
               mr: 10
             }}
-          >
+            >
             <EarthCanvas />
           </Box>
         </Box>
+      </>
       )}
     </Box>
   );
