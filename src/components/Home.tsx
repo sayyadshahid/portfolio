@@ -161,43 +161,57 @@ export default function Home() {
         </Box>
       ) : (
 
-<>
-         <Box sx={{
-           width: '45%',
-           height: '100vh',
-           position: 'absolute',
-           bgcolor: 'transparent',
-           zIndex: 1,
-           ml: '60%'
-          }}>
-            
-          </Box>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100vh",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "#000", // optional
-          }}
-          >
-         
+        <>
           <Box
             sx={{
-              width: "440px",
-              height: "440px",
-              transform: "rotate(-10deg)",
+              width: "25%",
+              height: "100vh",
+              position: "absolute",
+              ml: "75%",
+              zIndex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            
+          </Box>
+
+          <Box sx={{
+            width: '30%',
+            height: '100vh',
+            position: 'absolute',
+            bgcolor: 'transparent',
+            zIndex: 1,
+
+          }}>
+
+          </Box>
+          <Box
+            sx={{
+              width: "100%",
+              height: "100vh",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              mr: 10
+              backgroundColor: "#000", // optional
             }}
+          >
+
+            <Box
+              sx={{
+                width: "440px",
+                height: "440px",
+                transform: "rotate(-10deg)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                mr: 10
+              }}
             >
-            <EarthCanvas />
+              <EarthCanvas />
+            </Box>
           </Box>
-        </Box>
-      </>
+        </>
       )}
     </Box>
   );
