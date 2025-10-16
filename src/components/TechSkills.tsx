@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
+import MySkills from "./Skills";
 
 const skills = [
   { name: "HTML 5", img: `${process.env.PUBLIC_URL}/skills/html.svg` },
@@ -12,7 +13,7 @@ const skills = [
   { name: "React", img: `${process.env.PUBLIC_URL}/skills/react.svg` },
   { name: "Next.JS", img: `${process.env.PUBLIC_URL}/skills/next-js.svg` },
   { name: "Python", img: `${process.env.PUBLIC_URL}/skills/python-5.svg` },
-  { name: "FastApi", img: `${process.env.PUBLIC_URL}/skills/fastapi-1.svg`},
+  { name: "FastApi", img: `${process.env.PUBLIC_URL}/skills/fastapi-1.svg` },
   { name: "Django", img: `${process.env.PUBLIC_URL}/skills/django-community.svg` },
   { name: "MongoDB", img: `${process.env.PUBLIC_URL}/skills/mongo.svg` },
   { name: "PostgreSQL", img: `${process.env.PUBLIC_URL}/skills/postgresql.svg` },
@@ -53,6 +54,7 @@ const TechSkills = () => {
         TECHNICAL SKILLS
       </Typography>
 
+      <MySkills />
       <Box
         sx={{
           display: "flex",

@@ -26,15 +26,15 @@ const skills = {
   ],
   backend: [
     { name: "Python", level: "Advanced" },
-    { name: "FastApi", level: "Advanced" },
+    { name: "FastAPI", level: "Advanced" },
     { name: "Django", level: "Basic" },
-    { name: "Rest Api", level: "Intermediate" },
+    { name: "Rest API", level: "Intermediate" },
     { name: "PostgreSQL", level: "Intermediate" },
     { name: "MongoDB", level: "Intermediate" },
   ],
 };
 
-export default function MyExperience() {
+export default function MySkills() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -108,8 +108,8 @@ export default function MyExperience() {
     <Box
       data-aos="fade-in"
       sx={{
-        minHeight: "100vh",
-        background: "radial-gradient(circle, #fafafa 0%, #D7D7D7  100%)",
+
+        background: 'transform',
         color: "white",
         px: { xs: 2, md: 4 },
         py: 10,
@@ -117,24 +117,7 @@ export default function MyExperience() {
       }}
       id="exp"
     >
-      <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
-        <img src={`${process.env.PUBLIC_URL}/breaker.svg`} alt="breaker" style={{ maxWidth: "200px" }} />
-      </Box>
 
-      <Typography variant="overline" sx={{ color: "GREY", letterSpacing: 2 }}>
-        What Skill's I Have
-      </Typography>
-      <Typography
-        variant="h4"
-        sx={{
-          fontWeight: "bold",
-          mb: 6,
-          fontSize: 50,
-          color: "grey",
-        }}
-      >
-        My Experience
-      </Typography>
 
       <Box
         sx={{

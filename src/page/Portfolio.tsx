@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import Home from "../components/Home";
 import AboutSection from "../components/abou";
 import AboutMe from "../components/Aboutme";
-import MyExperience from "../components/Skills";
+import MySkills from "../components/Skills";
 import TechSkills from "../components/TechSkills";
 import AllPortfolio from "../components/Portfolios";
 import Contact from "../components/Contact";
@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 
 // Import your bottom navigation component
 import PortfolioBottomNav from "../components/BottomNav"; // Adjust the path as needed
+import MyExperience from "../components/Experience";
 
 export default function Portfolio() {
   useEffect(() => {
