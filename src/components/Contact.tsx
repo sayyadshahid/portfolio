@@ -1,23 +1,74 @@
-import React, { useEffect } from "react";
-import { Box, Typography, Button, TextField, Paper, Link } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import {
+  Box,
+  Typography,
+  Button,
+  TextField,
+  Paper,
+  Link,
+  CircularProgress,
+} from "@mui/material";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-
+import { useFormik } from "formik";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+ 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
-
     const leftElements = document.querySelectorAll('[data-aos-id="left"]');
     const rightElements = document.querySelectorAll('[data-aos-id="right"]');
 
     leftElements.forEach((el) => {
       el.setAttribute("data-aos", isMobile ? "fade-up" : "fade-right");
     });
-
     rightElements.forEach((el) => {
       el.setAttribute("data-aos", isMobile ? "fade-up" : "fade-left");
     });
   }, []);
+
+
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      message: "",
+    },
+
+    onSubmit: async (values, { resetForm }) => {
+      console.log("Form Values:", values);
+      console.log("Test:", process.env.REACT_APP_TEST);
+
+
+      const payload = {
+        service_id: process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        template_id: process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_CONTACT,
+        user_id: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        template_params: {
+          to_email: "i.shahidsayyad@gmail.com",
+          fullName: values.fullName || "N/A",
+          email: values.email || "N/A",
+          message: values.message || "N/A",
+          reply_to: values.email || "N/A",
+        },
+      };
+
+      try {
+        setLoading(true);
+        await axios.post("https://api.emailjs.com/api/v1.0/email/send", payload);
+        toast.success("Message sent successfully!");
+        resetForm();
+
+      } catch (error) {
+          toast.error("Failed to send message. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
 
   return (
     <Box
@@ -25,7 +76,7 @@ export default function Contact() {
       sx={{
         background: "radial-gradient(circle, #f1f1f1 0%, #D7D7D7 100%)",
         minHeight: "100vh",
-        overflowX: "hidden", // ✅ Prevent horizontal scroll
+        overflowX: "hidden",
       }}
     >
       <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
@@ -66,7 +117,6 @@ export default function Contact() {
               justifyContent: "center",
             }}
           >
-            {/* Email */}
             <Paper
               data-aos-id="left"
               data-aos="fade-right"
@@ -99,7 +149,6 @@ export default function Contact() {
               </Link>
             </Paper>
 
-            {/* WhatsApp */}
             <Paper
               data-aos-id="left"
               data-aos="fade-right"
@@ -169,8 +218,11 @@ export default function Contact() {
             >
               Contact Me
             </Typography>
+
+            {/* ✅ Contact Form */}
             <Box
               component="form"
+              onSubmit={formik.handleSubmit}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -184,7 +236,10 @@ export default function Contact() {
               <TextField
                 variant="standard"
                 placeholder="Your Full Name"
+                name="fullName"
                 fullWidth
+                value={formik.values.fullName}
+                onChange={formik.handleChange}
                 InputProps={{
                   style: { color: "#fff" },
                 }}
@@ -200,11 +255,16 @@ export default function Contact() {
                     borderBottomColor: "#565657",
                   },
                 }}
+                required
               />
               <TextField
                 variant="standard"
-                placeholder="Your Mail"
+                placeholder="Your Email"
+                name="email"
                 fullWidth
+                type="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
                 InputProps={{
                   style: { color: "#fff" },
                 }}
@@ -220,13 +280,17 @@ export default function Contact() {
                     borderBottomColor: "#565657",
                   },
                 }}
+                required
               />
               <TextField
                 variant="standard"
                 placeholder="Your Message"
+                name="message"
                 fullWidth
                 multiline
                 minRows={4}
+                value={formik.values.message}
+                onChange={formik.handleChange}
                 InputProps={{
                   style: { color: "#fff" },
                 }}
@@ -242,9 +306,13 @@ export default function Contact() {
                     borderBottomColor: "#565657",
                   },
                 }}
+                required
               />
+
               <Button
+                type="submit"
                 variant="contained"
+                disabled={loading}
                 sx={{
                   bgcolor: "#000000",
                   color: "#fff",
@@ -259,7 +327,11 @@ export default function Contact() {
                   },
                 }}
               >
-                Send Message
+                {loading ? (
+                  <CircularProgress size={24} sx={{ color: "#fff" }} />
+                ) : (
+                  "Send Message"
+                )}
               </Button>
             </Box>
           </Box>
