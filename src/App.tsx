@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <Box>
-      {/* ToastContainer placed here makes it available app-wide */}
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -22,7 +21,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Portfolio />} />
-        {/* Add other routes here if needed */}
       </Routes>
     </Box>
   );
