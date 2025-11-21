@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import Portfolio from "./page/Portfolio";
 import { Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify"; // ✅ import ToastContainer
-import "react-toastify/dist/ReactToastify.css";  // ✅ import toastify CSS
+import { ToastContainer } from "react-toastify";  
+import "react-toastify/dist/ReactToastify.css";   
 
 function App() {
   return (
