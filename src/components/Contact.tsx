@@ -17,6 +17,10 @@ import { ToastContainer, toast } from "react-toastify";
 export default function Contact() {
   const [loading, setLoading] = useState(false);
 
+
+
+
+  
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
     const leftElements = document.querySelectorAll('[data-aos-id="left"]');
