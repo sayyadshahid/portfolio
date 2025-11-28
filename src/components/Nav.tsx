@@ -89,8 +89,8 @@ export default function Nav() {
   sx={{
     '& .MuiDrawer-paper': {
       width: '100%',
-      backgroundColor: 'rgba(255, 255, 255, 0.5)', // Transparent white background
-      backdropFilter: 'blur(1px)', // Apply blur effect to the content behind the drawer
+      backgroundColor: 'rgba(255, 255, 255, 0.5)', 
+      backdropFilter: 'blur(1px)', 
       boxShadow: 'none',
       borderBottom: '1px solid rgba(255, 255, 255, 0.7)', // Slight border for contrast
       padding: '10px',

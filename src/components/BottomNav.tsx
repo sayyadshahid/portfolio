@@ -17,7 +17,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 function PortfolioBottomNav() {
   const [value, setValue] = useState(0);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // sm = 600px
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));  
 
   const handleNavigation = (newValue: any) => {
     setValue(newValue);
@@ -77,7 +77,7 @@ function PortfolioBottomNav() {
     zIndex: 1000,
     borderRadius: 6,
     px: isMobile ? 1 : 2,
-    py: 0.1, // smaller padding
+    py: 0.1, 
     bgcolor: "rgba(100, 100, 100, 0.12)",
     boxShadow: 2,
     width: isMobile ? "92%" : "auto",

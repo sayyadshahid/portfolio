@@ -16,7 +16,7 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import MenuBookIcon from "@mui/icons-material/MenuBook"; // For "Medium" icon substitute
+import MenuBookIcon from "@mui/icons-material/MenuBook";  
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
@@ -25,7 +25,6 @@ const navLinks = [
   { label: "About", icon: <InfoIcon />, href: "#about" },
   { label: "Experience", icon: <WorkIcon />, href: "#experience" },
   { label: "Portfolio", icon: <FolderIcon />, href: "#portfolio" },
-  // { label: "Contact", icon: <ContactMailIcon />, href: "#contact" },
 ];
 
 const socialLinks = [
@@ -59,7 +58,6 @@ export default function Footer() {
       }}
       component="footer"
     >
-      {/* Top Navigation */}
       <Stack
         direction="row"
         spacing={4}
@@ -67,7 +65,7 @@ export default function Footer() {
         sx={{
           mb: 3,
           flexWrap: "wrap",
-          gap: 2, // Adjusted for spacing on smaller screens
+          gap: 2,  
           textAlign: "center",
         }}
       >
@@ -78,7 +76,7 @@ export default function Footer() {
             underline="none"
             color="white"
             sx={{
-              fontSize: { xs: "0.9rem", sm: "1rem" }, // Font size adjusts for smaller screens
+              fontSize: { xs: "0.9rem", sm: "1rem" }, 
               fontWeight: 500,
               "&:hover": { color: "#c0c0c0" },
             }}
@@ -95,7 +93,7 @@ export default function Footer() {
         justifyContent="center"
         sx={{
           mb: 2,
-          flexWrap: "wrap", // Make sure icons are wrapped on smaller screens
+          flexWrap: "wrap", 
           gap: 2,
         }}
       >

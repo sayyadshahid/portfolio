@@ -72,11 +72,10 @@ export default function Home() {
               display: "flex",
               gap: 3,
               flexWrap: "wrap",
-              alignItems: "center", // ✅ vertically centers items
-              justifyContent: { xs: "center", md: "flex-start" }, // responsive alignment
+              alignItems: "center",   
+              justifyContent: { xs: "center", md: "flex-start" },  
             }}
           >
-            {/* GitHub */}
             <a
               href="https://github.com/sayyadshahid"
               target="_blank"
