@@ -92,7 +92,7 @@ export default function Nav() {
       backgroundColor: 'rgba(255, 255, 255, 0.5)', 
       backdropFilter: 'blur(1px)', 
       boxShadow: 'none',
-      borderBottom: '1px solid rgba(255, 255, 255, 0.7)', // Slight border for contrast
+      borderBottom: '1px solid rgba(255, 255, 255, 0.7)',  
       padding: '10px',
     }
   }}
