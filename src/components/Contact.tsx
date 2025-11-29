@@ -46,9 +46,9 @@ export default function Contact() {
 
 
       const payload = {
-        service_id: process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        template_id: process.env.REACT_APP_EMAILJS_TEMPLATE_ID_FOR_CONTACT,
-        user_id: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        service_id: 'service_5n8l8xr',
+        template_id: 'template_s6umhs9',
+        user_id: 'wYpOotgmvo0wbNjqv',
         template_params: {
           to_email: "i.shahidsayyad@gmail.com",
           fullName: values.fullName || "N/A",
