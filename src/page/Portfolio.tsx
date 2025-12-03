@@ -2,8 +2,6 @@ import { Box } from "@mui/material";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// Sections
 import Home from "../components/Home";
 import AboutSection from "../components/abou";
 import AboutMe from "../components/Aboutme";
@@ -13,15 +11,14 @@ import AllPortfolio from "../components/Portfolios";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
-// Import your bottom navigation component
-import PortfolioBottomNav from "../components/BottomNav"; // Adjust the path as needed
+import PortfolioBottomNav from "../components/BottomNav";  
 import MyExperience from "../components/Experience";
 
 export default function Portfolio() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
     });
   }, []);
 
@@ -53,7 +50,6 @@ export default function Portfolio() {
         </Box>
       <PortfolioBottomNav />
       </Box>
-      {/* Add your fixed bottom navigation here */}
     </>
   );
 }

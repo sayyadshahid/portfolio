@@ -37,6 +37,8 @@ function PortfolioBottomNav() {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  
   const renderNavAction = (index: number, icon: JSX.Element) => (
     <BottomNavigationAction
       icon={
