@@ -41,9 +41,6 @@ export default function Contact() {
     },
 
     onSubmit: async (values, { resetForm }) => {
-      console.log("Form Values:", values);
-      console.log("Test:", process.env.REACT_APP_TEST);
-
 
       const payload = {
         service_id: 'service_5n8l8xr',
