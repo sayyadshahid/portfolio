@@ -1,16 +1,30 @@
+import { useState } from "react";
 import {
   Box,
   Button,
   Typography,
   useMediaQuery,
   useTheme,
+  Dialog,
+  DialogContent,
+  IconButton,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
 import Nav from "./Nav";
 import EarthCanvas from "./canvas/EarthCanvas";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 export default function Home() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [openCV, setOpenCV] = useState(false);
+
+  const handleOpenCV = () => setOpenCV(true);
+  const handleCloseCV = () => setOpenCV(false);
 
   return (
     <Box
@@ -72,8 +86,8 @@ export default function Home() {
               display: "flex",
               gap: 3,
               flexWrap: "wrap",
-              alignItems: "center",   
-              justifyContent: { xs: "center", md: "flex-start" },  
+              alignItems: "center",
+              justifyContent: { xs: "center", md: "flex-start" },
             }}
           >
             <a
@@ -103,7 +117,7 @@ export default function Home() {
 
             {/* Download CV */}
             <a
-              href="./shahid CV.pdf"
+              href={`${process.env.PUBLIC_URL}/shahid CV.pdf`}
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -125,10 +139,29 @@ export default function Home() {
                 Download CV
               </Button>
             </a>
+
+            {/* See CV */}
+            <Button
+              onClick={handleOpenCV}
+              sx={{
+                color: "black",
+                bgcolor: "transparent",
+                border: "2px solid black",
+                borderRadius: 10,
+                height: 50,
+                fontWeight: 600,
+                width: { xs: "100%", sm: "100%", md: "auto" },
+                px: 3,
+                "&:hover": {
+                  bgcolor: "rgba(0,0,0,0.05)",
+                },
+              }}
+            >
+              View CV
+            </Button>
           </Box>
         </Box>
       </Box>
-
 
       {!isMobile ? (
         // Desktop version (with rotated overlay)
@@ -159,7 +192,6 @@ export default function Home() {
           </Box>
         </Box>
       ) : (
-
         <>
           <Box
             sx={{
@@ -171,20 +203,17 @@ export default function Home() {
               justifyContent: "center",
               alignItems: "center",
             }}
-          >
-            
-          </Box>
+          ></Box>
 
-          <Box sx={{
-            width: '30%',
-            height: '100vh',
-            position: 'absolute',
-            bgcolor: 'transparent',
-            zIndex: 1,
-
-          }}>
-
-          </Box>
+          <Box
+            sx={{
+              width: "30%",
+              height: "100vh",
+              position: "absolute",
+              bgcolor: "transparent",
+              zIndex: 1,
+            }}
+          ></Box>
           <Box
             sx={{
               width: "100%",
@@ -195,7 +224,6 @@ export default function Home() {
               backgroundColor: "#000", // optional
             }}
           >
-
             <Box
               sx={{
                 width: "440px",
@@ -204,7 +232,7 @@ export default function Home() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                mr: 10
+                mr: 10,
               }}
             >
               <EarthCanvas />
@@ -212,6 +240,90 @@ export default function Home() {
           </Box>
         </>
       )}
+
+      {/* CV Dialog */}
+      <Dialog
+        open={openCV}
+        onClose={handleCloseCV}
+        maxWidth="md"
+        fullWidth
+        PaperProps={{
+          sx: {
+            maxWidth: "800px",
+            maxHeight: "90vh",
+            borderRadius: 3,
+            bgcolor: "#fff",
+            overflow: "hidden", // Ensures inner scroll handles it
+            m: { xs: 2, md: 4 }, // Small margin on mobile
+          },
+        }}
+      >
+        <IconButton
+          aria-label="close"
+          onClick={handleCloseCV}
+          sx={{
+            position: "absolute",
+            right: 8,
+            top: 8,
+            color: "grey.500",
+            zIndex: 1,
+            bgcolor: "rgba(255, 255, 255, 0.8)",
+            "&:hover": {
+              bgcolor: "rgba(255, 255, 255, 1)",
+            },
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+        <DialogContent
+          sx={{
+            p: 0,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            bgcolor: "#fff",
+            overflowY: "auto",
+          }}
+        >
+          <Document
+            file={`${process.env.PUBLIC_URL}/shahid CV.pdf`}
+            externalLinkTarget="_blank"
+            loading={
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "50vh",
+                  width: "100%",
+                }}
+              >
+                <Typography>Loading CV...</Typography>
+              </Box>
+            }
+            error={
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "50vh",
+                  width: "100%",
+                }}
+              >
+                <Typography color="error">Failed to load CV.</Typography>
+              </Box>
+            }
+          >
+            <Page
+              pageNumber={1}
+              renderTextLayer={false}
+              renderAnnotationLayer={true}
+              width={isMobile ? window.innerWidth * 0.9 : 800}
+            />
+          </Document>
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 }
