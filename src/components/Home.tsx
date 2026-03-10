@@ -243,6 +243,7 @@ export default function Home() {
 
       {/* CV Dialog */}
       <Dialog
+        fullScreen={isMobile}
         open={openCV}
         onClose={handleCloseCV}
         maxWidth="md"
@@ -250,11 +251,12 @@ export default function Home() {
         PaperProps={{
           sx: {
             maxWidth: "800px",
-            maxHeight: "90vh",
-            borderRadius: 3,
+            maxHeight: isMobile ? "100vh" : "90vh",
+            height: isMobile ? "auto" : "auto",
+            borderRadius: isMobile ? 0 : 3,
             bgcolor: "#fff",
             overflow: "hidden", // Ensures inner scroll handles it
-            m: { xs: 2, md: 4 }, // Small margin on mobile
+            m: isMobile ? 0 : 4, // No margin on mobile
           },
         }}
       >
@@ -319,7 +321,7 @@ export default function Home() {
               pageNumber={1}
               renderTextLayer={false}
               renderAnnotationLayer={true}
-              width={isMobile ? window.innerWidth * 0.9 : 800}
+              width={isMobile ? window.innerWidth : 800}
             />
           </Document>
         </DialogContent>
