@@ -17,6 +17,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     window.innerWidth > 1024
   );
   const [isMobile] = useState<boolean>(window.innerWidth <= 768);
+  const [shouldRenderCharacter, setShouldRenderCharacter] = useState(false);
 
   useEffect(() => {
     const resizeHandler = () => {
@@ -28,14 +29,42 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     return () => {
       window.removeEventListener("resize", resizeHandler);
     };
-  }, [isDesktopView]);
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1024) return;
+
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    let idleId: number | undefined;
+    const win = window as Window & {
+      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    };
+
+    const mountCharacter = () => setShouldRenderCharacter(true);
+
+    if (typeof win.requestIdleCallback === "function") {
+      idleId = win.requestIdleCallback(mountCharacter, { timeout: 1500 });
+    } else {
+      timeoutId = setTimeout(mountCharacter, 1200);
+    }
+
+    return () => {
+      if (idleId !== undefined && typeof win.cancelIdleCallback === "function") {
+        win.cancelIdleCallback(idleId);
+      }
+      if (timeoutId !== undefined) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, []);
 
   return (
     <div className="container-main">
       <Cursor />
       <Navbar />
       <SocialIcons />
-      {isDesktopView && !isMobile && children}
+      {isDesktopView && !isMobile && shouldRenderCharacter && children}
       <div className="container-main">
         <Landing />
         <About />

@@ -46,7 +46,7 @@ About you (Redoyanul Haque):
 - Experience: 3+ years in software development
 - Specialties: AI/ML, Python, React, TypeScript, Node.js, Three.js, Chess Engine Development
 - Notable project: RedxChess - A chess engine with 3640 ELO rating
-- Other projects: Drishti (AI for blind), VoteChain (blockchain voting), GameKroy (gaming platform)
+- Other projects: Drishti (AI for blind), VoteChain (blockchain voting), Phoenix (AI assistant)
 - Languages: Bengali (native), English (fluent)
 - Hobbies: Chess, coding, building AI projects
 - Personality: Friendly, helpful, passionate about technology, loves teaching
@@ -366,7 +366,7 @@ const Play = () => {
           <div className="player-bar opponent-bar">
             <div className="player-info">
               <div className="player-avatar">
-                <img src="/images/mypic.jpeg" alt="Redoyanul" />
+                <img src="/images/mypic.jpeg" alt="Redoyanul" loading="lazy" decoding="async" />
               </div>
               <div className="player-details">
                 <span className="player-name">Redoyanul</span>

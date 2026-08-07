@@ -106,56 +106,54 @@ export const config = {
             title: "Drishti",
             category: "AI / LLM",
             technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali."
+            image: "/images/Drishti.png",
+            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali.",
+            link: "https://huggingface.co/red1-for-hek/drishti-ilm-x1"
         },
         {
             id: 2,
             title: "VoteChain",
             category: "Blockchain",
             technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/votechain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking."
-        },
-        {
-            id: 3,
-            title: "EIE - Earthquake Impact Estimator",
-            category: "IoT / Hardware",
-            technologies: "Arduino, C++, IoT Sensors, Python, ML, React",
-            image: "/images/eie.png",
-            description: "A practical circuit-based IoT system utilizing Arduino to predict earthquakes before they strike. Integrates hardware sensors for real-time seismic detection and impact estimation."
+            image: "/images/VoteChain.png",
+            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking.",
+            link: "https://github.com/red1-for-hek/smart-election-by-blockchain"
         },
         {
             id: 4,
-            title: "GameKroy",
-            category: "Full Stack",
-            technologies: "React, Node.js, MongoDB, Express, Stripe, TailwindCSS",
-            image: "/images/gamekroy.png",
-            description: "A full-featured e-commerce platform for gaming products. Includes user authentication, product catalog, shopping cart, secure payments, order tracking, and admin dashboard."
+            title: "Flood Spaces 2.0",
+            category: "AI / ML",
+            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
+            image: "/images/FloodSpaces.png",
+            description: "Predicts flood risks across Bangladesh up to one month in advance and sends early alerts to help people prepare.",
+            link: "https://github.com/red1-for-hek/Flood-Spaces-2.0"
         },
         {
             id: 5,
-            title: "RedxChess",
-            category: "AI / Game Engine",
-            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
-            image: "/images/redxchess.png",
-            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation."
+            title: "Phoenix 3.0",
+            category: "AI Assistant",
+            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
+            image: "/images/Phoenix3.0.png",
+            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience.",
+            link: "https://github.com/red1-for-hek/phoenix3.0"
         },
         {
             id: 6,
-            title: "Floodhub",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/floodhub.png",
-            description: "A flood prediction model specifically designed for Bangladesh's river systems. Analyzes weather patterns, water levels, and historical data to provide accurate flood forecasts and alerts."
+            title: "RedxChess",
+            category: "AI / Game Engine",
+            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
+            image: "/images/RedxChess.png",
+            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation.",
+            link: "/play"
         },
         {
             id: 7,
-            title: "Phoenix",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/phoenix.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience."
+            title: "Prodesk",
+            category: "E-commerce",
+            technologies: "React, Node.js, MongoDB, Express, Stripe",
+            image: "/images/Prodesk.png",
+            description: "A complete e-commerce platform with secure checkout and smooth product browsing.",
+            link: "https://github.com/red1-for-hek/prodesk"
         },
         {
             id: 8,
@@ -163,7 +161,8 @@ export const config = {
             category: "Security / Android",
             technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
             image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes."
+            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes.",
+            link: ""
         }
     ],
     contact: {

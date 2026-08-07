@@ -106,7 +106,7 @@ const TechStackNew = () => {
                   title={tech.name}
                   data-cursor="disable"
                 >
-                  <img src={tech.icon} alt={tech.name} />
+                  <img src={tech.icon} alt={tech.name} loading="lazy" decoding="async" />
                   <span>{tech.name}</span>
                 </a>
               ))}
