@@ -10,22 +10,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   useEffect(() => {
-    // Disable pinning on mobile to allow scrolling
-    if (window.innerWidth <= 768) return;
-
     let translateX: number = 0;
 
     function setTranslateX() {
       const box = document.getElementsByClassName("work-box");
       if (box.length === 0) return;
-      const rectLeft = document
-        .querySelector(".work-container")!
-        .getBoundingClientRect().left;
+      const workContainer = document.querySelector(".work-container");
+      if (!workContainer) return;
+      const rectLeft = workContainer.getBoundingClientRect().left;
       const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding: number =
-        parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+      const parentElement = box[0].parentElement;
+      const parentWidth = parentElement ? parentElement.getBoundingClientRect().width : window.innerWidth;
+      const style = window.getComputedStyle(box[0]);
+      const paddingLeft = parseFloat(style.paddingLeft) || 0;
+      const paddingRight = parseFloat(style.paddingRight) || 0;
+      let padding: number = (paddingLeft + paddingRight) / 2;
+      const calcX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+      translateX = isNaN(calcX) || calcX < 0 ? 0 : calcX;
     }
 
     setTranslateX();
@@ -64,6 +65,9 @@ const Work = () => {
         <h2>
           My <span>Work</span>
         </h2>
+        <p className="work-section-desc">
+          Featured full-stack web applications, custom software, and digital platforms engineered with modern technologies.
+        </p>
         <div className="work-flex">
           {config.projects.slice(0, 5).map((project, index) => (
             <div className="work-box" key={project.id}>
@@ -76,6 +80,9 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
+                {project.description && (
+                  <p className="work-project-desc">{project.description}</p>
+                )}
                 <h4>Tools and features</h4>
                 <p>{project.technologies}</p>
               </div>

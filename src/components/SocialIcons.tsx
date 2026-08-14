@@ -125,12 +125,12 @@ const SocialIcons = () => {
             </a>
           </span>
           <span>
-            <a href={config.contact.twitter} target="_blank" rel="noopener noreferrer">
+            <a href={(config.contact as any).twitter || "#"} target="_blank" rel="noopener noreferrer">
               <FaXTwitter />
             </a>
           </span>
           <span>
-            <a href={config.contact.instagram} target="_blank" rel="noopener noreferrer">
+            <a href={(config.contact as any).instagram || "#"} target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
           </span>
@@ -156,16 +156,18 @@ const SocialIcons = () => {
         onClose={handleCloseCV}
         maxWidth="md"
         fullWidth
-        PaperProps={{
-          sx: {
-            maxWidth: "800px",
-            height: isMobile ? "100vh" : "90vh",
-            maxHeight: isMobile ? "100vh" : "90vh",
-            borderRadius: isMobile ? 0 : 3,
-            bgcolor: "#fff",
-            overflow: "hidden",
-            position: "relative",
-            m: isMobile ? 0 : 4,
+        slotProps={{
+          paper: {
+            sx: {
+              maxWidth: "800px",
+              height: isMobile ? "100vh" : "90vh",
+              maxHeight: isMobile ? "100vh" : "90vh",
+              borderRadius: isMobile ? 0 : 3,
+              bgcolor: "#fff",
+              overflow: "hidden",
+              position: "relative",
+              m: isMobile ? 0 : 4,
+            },
           },
         }}
       >
