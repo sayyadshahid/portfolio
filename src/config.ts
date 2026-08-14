@@ -1,192 +1,115 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
-        title: "AI & Full-Stack Developer",
-        description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
+        name: "Shahid",
+        fullName: "Shahid Sayyad",
+        title: "Frontend & Full-Stack Developer",
+        description: "Frontend & Full-Stack Web Developer with robust problem-solving skills and proven experience building scalable, high-performance web applications and mobile apps."
     },
     social: {
-        github: "red1-for-hek",
-        email: "redoyanul1234@gmail.com",
-        location: "Bangladesh"
+        github: "sayyadshahid",
+        email: "i.shahidsayyad@gmail.com",
+        location: "Pune, India"
     },
     about: {
         title: "About Me",
-        description: "I am a self-taught AI & Full-Stack Developer from Bangladesh. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and JARVIS-like Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas."
+        description: "I am a Full Stack Web Developer based in Pune, India. I specialize in leading frontend development using React.js, Next.js, and React Native, as well as building RESTful APIs with FastAPI and Node.js. With proven experience managing cross-functional projects, I focus on delivering scalable UI architecture, optimizing UX performance, and building intelligent web applications."
     },
     experiences: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
-            period: "2025 - Present",
-            location: "Bangladesh",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
+            position: "Frontend Developer",
+            company: "Microzen Technologies",
+            period: "Mar 2026 – Present",
+            location: "Pune, India",
+            description: "Leading frontend development using React.js and React Native, delivering scalable, high-performance applications and optimizing UI/UX performance.",
             responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
+                "Leading frontend development using React.js and React Native for scalable applications",
+                "Managing multiple projects and collaborating with cross-functional teams for efficient delivery",
+                "Working with modern frameworks like Next.js and contributing to Angular-based projects",
+                "Optimizing UI/UX performance and building scalable frontend architectures"
             ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
+            technologies: ["React.js", "React Native", "Next.js", "Angular", "TypeScript", "UI/UX"]
         },
         {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Bangladesh",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
+            position: "Full Stack Developer",
+            company: "Fladdra Technologies",
+            period: "Jan 2025 – Dec 2025",
+            location: "Pune, India",
+            description: "Built and optimized highly responsive UI components, RESTful APIs, and administrative control systems.",
             responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
+                "Built and optimized highly responsive, reusable UI components in React.js, improving load time by 30%",
+                "Designed and deployed RESTful APIs with FastAPI for secure authentication and data handling",
+                "Developed and maintained admin & user panels, reducing manual workflows by 40%",
+                "Collaborated with cross-functional teams to integrate frontend and backend seamlessly"
             ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
-        },
-        {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
-            period: "2024",
-            location: "Bangladesh",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
-            responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
-            ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
-        },
-        {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Bangladesh",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
-        },
-        {
-            position: "Graphic Designer",
-            company: "Freelance",
-            period: "2022",
-            location: "Bangladesh",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
-            responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
-            ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
-        },
-        {
-            position: "Microsoft Office",
-            company: "Begin Learning",
-            period: "2021",
-            location: "Bangladesh",
-            description: "Started my journey into the digital world by learning Microsoft Office tools. This foundational step introduced me to computers and sparked my curiosity for technology.",
-            responsibilities: [
-                "Learning Microsoft Word, Excel, and PowerPoint",
-                "Creating documents and presentations",
-                "Understanding basic computer operations",
-                "Building foundational digital skills"
-            ],
-            technologies: ["MS Word", "MS Excel", "MS PowerPoint", "Computer Basics"]
+            technologies: ["React.js", "FastAPI", "Python", "REST APIs", "PostgreSQL", "UI Optimization"]
         }
     ],
     projects: [
         {
             id: 1,
-            title: "Drishti",
-            category: "AI / LLM",
-            technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/Drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali.",
-            link: "https://huggingface.co/red1-for-hek/drishti-ilm-x1"
+            title: "Hospital Management System",
+            category: "Full Stack / AI Chatbot",
+            technologies: "React, FastAPI, Python, MongoDB, AI Chatbot",
+            image: "/images/hospital_management.png",
+            description: "A web-based Hospital Management System with multi-hospital support, secure admin panels, and AI chatbot integration for streamlined operations.",
+            link: "https://hospital-managment-dynamic-web-app-shahids-projects-7019af7c.vercel.app/"
         },
         {
             id: 2,
-            title: "VoteChain",
-            category: "Blockchain",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/VoteChain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking.",
-            link: "https://github.com/red1-for-hek/smart-election-by-blockchain"
+            title: "Yazdaan Academy",
+            category: "E-Learning Platform",
+            technologies: "React, Node.js, Express, MongoDB, Admin Panel",
+            image: "/images/yazdaan.png",
+            description: "A web-based e-learning platform built at Fladdra Technologies featuring course sales, lecture access, and a secure admin management portal.",
+            link: "https://yazdaan-academy.vercel.app/"
+        },
+        {
+            id: 3,
+            title: "Clouds Networking",
+            category: "Cloud Platform",
+            technologies: "React, FastAPI, PostgreSQL, Python, REST APIs",
+            image: "/images/clouds.png",
+            description: "Full-stack cloud service platform including user/admin panels, course syllabi APIs, auth, feedback, blog management, and email integration.",
+            link: "https://cloudsnetworking.in/"
         },
         {
             id: 4,
-            title: "Flood Spaces 2.0",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/FloodSpaces.png",
-            description: "Predicts flood risks across Bangladesh up to one month in advance and sends early alerts to help people prepare.",
-            link: "https://github.com/red1-for-hek/Flood-Spaces-2.0"
+            title: "Alhaq Institute LMS",
+            category: "LMS / Frontend",
+            technologies: "React, Material UI, JavaScript, HTML5/CSS3",
+            image: "/images/alhaq.png",
+            description: "Learning Management System for Alhaq Institute featuring responsive UI and admin management for courses, lectures, and student records.",
+            link: "https://www.alhaqinstitute.com/"
         },
         {
             id: 5,
-            title: "Phoenix 3.0",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/Phoenix3.0.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience.",
-            link: "https://github.com/red1-for-hek/phoenix3.0"
-        },
-        {
-            id: 6,
-            title: "RedxChess",
-            category: "AI / Game Engine",
-            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
-            image: "/images/RedxChess.png",
-            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation.",
-            link: "/play"
-        },
-        {
-            id: 7,
-            title: "Prodesk",
-            category: "E-commerce",
-            technologies: "React, Node.js, MongoDB, Express, Stripe",
-            image: "/images/Prodesk.png",
-            description: "A complete e-commerce platform with secure checkout and smooth product browsing.",
-            link: "https://github.com/red1-for-hek/prodesk"
-        },
-        {
-            id: 8,
-            title: "HekTools",
-            category: "Security / Android",
-            technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
-            image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes.",
-            link: ""
+            title: "Pokédex Explorer",
+            category: "Frontend Web App",
+            technologies: "React, TypeScript, PokéAPI, CSS3",
+            image: "/images/pokedex.png",
+            description: "Interactive Pokémon database application showcasing real-time API filtering, stats visualization, and responsive card layouts.",
+            link: "https://pokedex-ochre-nine.vercel.app/"
         }
     ],
     contact: {
-        email: "redoyanul1234@gmail.com",
-        github: "https://github.com/red1-for-hek",
-        linkedin: "https://linkedin.com/in/red1-for-hek",
-        twitter: "https://x.com/red_1_ul",
-        facebook: "https://www.facebook.com/redoyanulhaque.hacker.official",
-        instagram: "https://www.instagram.com/red_1_ul"
+        email: "i.shahidsayyad@gmail.com",
+        github: "https://github.com/sayyadshahid",
+        linkedin: "https://linkedin.com/in/sayyadshahid",
+        whatsapp: "https://wa.me/8600330286",
+        phone: "+91 8600330286"
     },
     skills: {
         develop: {
-            title: "AI DEVELOPER",
-            description: "Building intelligent systems & AI solutions",
-            details: "Developing AI agents, chatbots, and machine learning models using Python, TensorFlow, and PyTorch. Specializing in LLMs, NLP, deep learning, and autonomous systems.",
-            tools: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "LLMs", "NLP", "Deep Learning", "Chatbots", "AI Agents"]
+            title: "FRONTEND & MOBILE",
+            description: "Scalable Web & Mobile Apps",
+            details: "Leading frontend development using React.js, Next.js, and React Native. Building responsive, high-performance user interfaces and reusable component systems.",
+            tools: ["React.js", "React Native", "Next.js", "Angular", "TypeScript", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Material UI"]
         },
         design: {
-            title: "FULL-STACK",
-            description: "Modern web development & scalable applications",
-            details: "Building responsive and performant web applications using React, Next.js, Node.js, and databases. Creating seamless user experiences with modern UI/UX principles.",
-            tools: ["React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "TailwindCSS", "REST APIs", "Docker", "Git"]
+            title: "BACKEND & APIS",
+            description: "REST APIs & Database Architecture",
+            details: "Designing and deploying RESTful APIs with FastAPI, Python, and Node.js. Implementing secure authentication, database modeling with PostgreSQL & MongoDB, and Git workflows.",
+            tools: ["Python", "FastAPI", "Django", "Node.js", "MongoDB", "PostgreSQL", "REST APIs", "Git", "Postman", "Vercel"]
         }
     }
 };
-
-
