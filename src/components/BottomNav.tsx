@@ -49,18 +49,21 @@ export default function PortfolioBottomNav() {
     const handleScroll = () => {
       if (isClickingRef.current) return;
 
-      if (window.scrollY < 150) {
+      const currentY = window.scrollY;
+      if (currentY < 150) {
         setValue(0);
         return;
       }
 
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      // Check sections from bottom to top using absolute bounding client rect
+      const triggerPoint = currentY + window.innerHeight * 0.4;
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const element = document.getElementById(sectionIds[i]);
         if (element) {
-          const top = element.offsetTop;
-          if (scrollPosition >= top) {
+          const rect = element.getBoundingClientRect();
+          const absoluteTop = rect.top + currentY;
+          if (triggerPoint >= absoluteTop) {
             setValue(i);
             break;
           }
