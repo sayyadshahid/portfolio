@@ -19,11 +19,12 @@
 }
 .social-icons:hover {
   transition: 0.3s;
-  color: var(--backgroundColor);
 }
-.social-icons a:hover {
-  color: var(--backgroundColor);
-  /* transform: scale(1.2); */
+.social-icons:hover a,
+.social-icons a:hover,
+.social-icons:hover a svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
 }
 .social-icons span {
   width: 50px;

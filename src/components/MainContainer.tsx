@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import Cursor from "./Cursor";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
+import PortfolioBottomNav from "./BottomNav";
 import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
@@ -63,6 +64,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     <div className="container-main">
       <Cursor />
       <Navbar />
+      <PortfolioBottomNav />
       <SocialIcons />
       {/* Single Hero Photo animated across sections */}
       <div className="single-hero-photo">
