@@ -1,8 +1,10 @@
 import { TextSplitter } from "../../utils/textSplitter";
 import gsap from "gsap";
 import { lenis } from "../Navbar";
+import { setAllTimeline } from "./GsapScroll";
 
 export function initialFX() {
+  setAllTimeline();
   document.body.style.overflowY = "auto";
   if (lenis) {
     lenis.start();

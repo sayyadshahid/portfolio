@@ -64,7 +64,10 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <Cursor />
       <Navbar />
       <SocialIcons />
-      {isDesktopView && !isMobile && shouldRenderCharacter && children}
+      {/* Single Hero Photo animated across sections */}
+      <div className="single-hero-photo">
+        <img src="/images/shahid.png" alt="Shahid" />
+      </div>
       <div className="container-main">
         <Landing />
         <About />

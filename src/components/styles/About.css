@@ -1,14 +1,35 @@
 .about-section {
   display: flex;
   align-items: center;
-  justify-content: left;
-  place-items: center;
+  justify-content: space-between;
   position: relative;
   opacity: 1;
   height: auto;
   width: var(--cWidth);
   margin: auto;
+  flex-direction: column;
 }
+
+.about-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+  z-index: 5;
+  margin-top: 30px;
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  filter: drop-shadow(0 0 50px rgba(194, 164, 255, 0.45));
+}
+
 .about-me {
   padding: 40px 0px;
   padding-bottom: 0;
@@ -42,9 +63,6 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .about-section {
-    justify-content: center;
-  }
   .about-me {
     width: 500px;
   }
@@ -78,7 +96,9 @@
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
-    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
     max-width: 1920px;
     height: var(--vh);
     padding: 0px;
@@ -86,7 +106,8 @@
   }
   .about-me {
     padding: 0px;
-    width: 50%;
+    width: 48%;
+    margin-left: auto;
   }
   .about-me p {
     font-size: 1.9vw;

@@ -19,11 +19,7 @@ const App = () => {
           element={
             <LoadingProvider>
               <Suspense>
-                <MainContainer>
-                  <Suspense>
-                    <CharacterModel />
-                  </Suspense>
-                </MainContainer>
+                <MainContainer />
               </Suspense>
             </LoadingProvider>
           }

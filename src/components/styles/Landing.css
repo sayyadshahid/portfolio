@@ -1,6 +1,38 @@
-/* Mobile Photo - hidden by default, shown only on mobile */
-.mobile-photo {
-  display: none;
+/* Single Hero Photo - animated across sections on scroll */
+.single-hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 840px;
+  height: 85vh;
+  max-height: 850px;
+  z-index: 5;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+}
+
+.single-hero-photo img {
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 50px rgba(194, 164, 255, 0.45));
+}
+
+@media screen and (min-width: 1025px) {
+  .single-hero-photo {
+    height: 100vh;
+    max-height: 1080px;
+    bottom: 0;
+    z-index: 11;
+    position: fixed;
+  }
 }
 
 /* Remove mobile photo and ensure 3D character is always hidden on mobile */
