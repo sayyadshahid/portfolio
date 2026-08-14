@@ -1,53 +1,36 @@
 import { useEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import HoverLinks from "./HoverLinks";
-import { gsap } from "gsap";
-import Lenis from "lenis";
 import "./styles/Navbar.css";
+import Lenis from "lenis";
+import { HiEnvelope } from "react-icons/hi2";
 
-gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
 
 const Navbar = () => {
   useEffect(() => {
     // Initialize Lenis smooth scroll
     lenis = new Lenis({
-      duration: 1.7,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1.7,
-      touchMultiplier: 2,
-      infinite: false,
     });
 
-    // Start paused
-    lenis.stop();
-
-    // Handle smooth scroll animation frame
     function raf(time: number) {
       lenis?.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
 
-    // Handle navigation links
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          if (section && lenis) {
-            const target = document.querySelector(section) as HTMLElement;
-            if (target) {
-              lenis.scrollTo(target, {
-                offset: 0,
-                duration: 1.5,
-              });
+    // Synchronize section clicks with smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = anchor.getAttribute("href")?.substring(1);
+        if (targetId) {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            lenis?.scrollTo(targetElement, { duration: 1.5 });
+          } else {
+            if (targetId === "") {
+              lenis?.scrollTo(0, { duration: 1.5 });
             }
           }
         }
@@ -63,6 +46,7 @@ const Navbar = () => {
       lenis?.destroy();
     };
   }, []);
+
   return (
     <>
       <div className="header">
@@ -71,10 +55,13 @@ const Navbar = () => {
         </a>
         <a
           href="mailto:i.shahidsayyad@gmail.com"
-          className="navbar-connect"
+          className="navbar-email-pill"
           data-cursor="disable"
         >
-          i.shahidsayyad@gmail.com
+          <span className="email-icon">
+            <HiEnvelope style={{ fontSize: "19px" }} />
+          </span>
+          <span className="email-text">i.shahidsayyad@gmail.com</span>
         </a>
       </div>
 
