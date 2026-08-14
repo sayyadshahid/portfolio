@@ -51,9 +51,7 @@
 
   .landing-section {
     min-height: 100vh !important;
-    min-height: 100dvh !important;
     height: 100vh !important;
-    height: 100dvh !important;
     width: 100% !important;
     max-width: 100vw !important;
     box-sizing: border-box !important;
@@ -221,12 +219,15 @@
     width: 100% !important;
     height: auto !important;
     max-width: 130% !important;
-    max-height: 85vh !important;
+    max-height: 520px !important;
     object-fit: contain !important;
     filter: drop-shadow(0 0 70px rgba(194, 164, 255, 0.7));
     border: none !important;
     background: transparent !important;
-    transform: scale(1.7) !important;
+    transform: scale(1.7) translateZ(0) !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    will-change: transform !important;
   }
 }
 
