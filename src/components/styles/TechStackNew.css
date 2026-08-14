@@ -208,6 +208,17 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .techstack-new {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .techstack-content h2 {
     font-size: 36px;

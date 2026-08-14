@@ -6,6 +6,7 @@ export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
   camera: THREE.PerspectiveCamera
 ) {
+  if (window.innerWidth <= 1024) return;
   let intensity: number = 0;
   setInterval(() => {
     intensity = Math.random();

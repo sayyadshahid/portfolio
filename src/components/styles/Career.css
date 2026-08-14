@@ -232,6 +232,18 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .career-section {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 60px 0px !important;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .career-info-box {
     flex-direction: column;

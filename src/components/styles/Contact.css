@@ -5,10 +5,20 @@
   position: relative;
   z-index: 1;
   background-color: var(--backgroundColor);
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-section {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    box-sizing: border-box !important;
+  }
 }
 
 .contact-container {
