@@ -13,11 +13,13 @@ import {
   Dialog,
   DialogContent,
   Button,
+  IconButton,
   Box,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -151,28 +153,46 @@ const SocialIcons = () => {
         </a>
       </div>
 
-      {/* Resume Modal View - Smooth Scrollable PDF Canvas */}
+      {/* Resume Modal View - Responsive PDF Canvas with Close & Download Buttons */}
       <Dialog
         fullScreen={isMobile}
         open={openCV}
         onClose={handleCloseCV}
         maxWidth="md"
         fullWidth
-        slotProps={{
-          paper: {
-            sx: {
-              maxWidth: "800px",
-              height: isMobile ? "100vh" : "90vh",
-              maxHeight: isMobile ? "100vh" : "90vh",
-              borderRadius: isMobile ? 0 : 3,
-              bgcolor: "#fff",
-              overflow: "hidden",
-              position: "relative",
-              m: isMobile ? 0 : 4,
-            },
+        PaperProps={{
+          sx: {
+            maxWidth: "800px",
+            height: isMobile ? "100vh" : "90vh",
+            maxHeight: isMobile ? "100vh" : "90vh",
+            borderRadius: isMobile ? 0 : 3,
+            bgcolor: "#fff",
+            overflow: "hidden",
+            position: "relative",
+            m: isMobile ? 0 : 4,
           },
         }}
       >
+        {/* Top-Right Close Button */}
+        <IconButton
+          aria-label="close"
+          onClick={handleCloseCV}
+          sx={{
+            position: "absolute",
+            right: 12,
+            top: 12,
+            color: "grey.700",
+            zIndex: 11,
+            bgcolor: "rgba(255, 255, 255, 0.9)",
+            boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+            "&:hover": {
+              bgcolor: "#ffffff",
+            },
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+
         {/* Top-Right Download Button */}
         <Button
           component="a"
@@ -183,8 +203,8 @@ const SocialIcons = () => {
           startIcon={<DownloadIcon />}
           sx={{
             position: "absolute",
-            right: 14,
-            top: 14,
+            right: 64,
+            top: 12,
             zIndex: 10,
             bgcolor: "#0b080c",
             color: "#ffffff",
@@ -209,7 +229,9 @@ const SocialIcons = () => {
           onTouchMove={(e) => e.stopPropagation()}
           sx={{
             p: 0,
-            display: "block",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
             bgcolor: "#fff",
             height: "100%",
             maxHeight: "100%",
@@ -228,7 +250,7 @@ const SocialIcons = () => {
               justifyContent: "center",
               width: "100%",
               minHeight: "100%",
-              pt: 2,
+              pt: { xs: 7, md: 2 },
               pb: 2,
             }}
           >
@@ -236,13 +258,13 @@ const SocialIcons = () => {
               <Box
                 sx={{
                   width: "100%",
-                  height: "80vh",
+                  height: isMobile ? "calc(100vh - 60px)" : "80vh",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
                   gap: 2,
-                  p: 2,
+                  p: 1,
                 }}
               >
                 <iframe
@@ -275,7 +297,7 @@ const SocialIcons = () => {
                   <Box
                     sx={{
                       width: "100%",
-                      height: "75vh",
+                      height: isMobile ? "calc(100vh - 60px)" : "80vh",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
