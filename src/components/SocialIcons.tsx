@@ -173,23 +173,36 @@ const SocialIcons = () => {
           },
         }}
       >
-        <IconButton
-          aria-label="close"
-          onClick={handleCloseCV}
+        {/* Top-Right Download Button */}
+        <Button
+          component="a"
+          href="./shahid-CV.pdf"
+          download="Shahid_Sayyad_Resume.pdf"
+          variant="contained"
+          size="small"
+          startIcon={<DownloadIcon />}
           sx={{
             position: "absolute",
-            right: 8,
-            top: 8,
-            color: "grey.500",
-            zIndex: 1,
-            bgcolor: "rgba(255, 255, 255, 0.8)",
+            right: 14,
+            top: 14,
+            zIndex: 10,
+            bgcolor: "#0b080c",
+            color: "#ffffff",
+            borderRadius: "20px",
+            textTransform: "none",
+            fontSize: "13px",
+            fontWeight: 600,
+            px: 2.2,
+            py: 0.7,
+            boxShadow: "0 4px 14px rgba(0, 0, 0, 0.25)",
             "&:hover": {
-              bgcolor: "rgba(255, 255, 255, 1)",
+              bgcolor: "#c2a4ff",
+              color: "#0b080c",
             },
           }}
         >
-          <CloseIcon />
-        </IconButton>
+          Download
+        </Button>
 
         <DialogContent
           onWheel={(e) => e.stopPropagation()}
