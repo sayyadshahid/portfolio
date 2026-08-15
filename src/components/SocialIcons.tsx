@@ -174,7 +174,7 @@ const SocialIcons = () => {
         {/* Top-Right Download Button */}
         <Button
           component="a"
-          href="/shahid_CV.pdf"
+          href="./shahid_CV.pdf"
           download="Shahid_Sayyad_Resume.pdf"
           variant="contained"
           size="small"
@@ -231,7 +231,7 @@ const SocialIcons = () => {
             }}
           >
             <Document
-              file="/shahid_CV.pdf"
+              file="./shahid_CV.pdf"
               externalLinkTarget="_blank"
               loading={
                 <Box
