@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
 import { config } from "../config";
+import AetherFlowHero from "@/components/ui/aether-flow-hero";
 
 const Landing = ({ children }: PropsWithChildren) => {
   const nameParts = config.developer.fullName.split(" ");
@@ -9,8 +10,13 @@ const Landing = ({ children }: PropsWithChildren) => {
 
   return (
     <>
-      <div className="landing-section" id="home">
-        <div className="landing-container">
+      <div className="landing-section" id="home" style={{ position: "relative" }}>
+        {/* Interactive Particle Animation Background */}
+        <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0, opacity: 0.6, pointerEvents: "auto" }}>
+          <AetherFlowHero />
+        </div>
+
+        <div className="landing-container" style={{ position: "relative", zIndex: 2 }}>
           <div className="landing-intro">
             <h2>Hello! I'm</h2>
             <h1>
