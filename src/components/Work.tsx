@@ -4,11 +4,19 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import { config } from "../config";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
+  const navigate = useNavigate();
+
+  const handleSeeAllWorks = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate("/myworks");
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     let translateX: number = 0;
 
@@ -25,7 +33,7 @@ const Work = () => {
       const paddingLeft = parseFloat(style.paddingLeft) || 0;
       const paddingRight = parseFloat(style.paddingRight) || 0;
       let padding: number = (paddingLeft + paddingRight) / 2;
-      const calcX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+      const calcX = rect.width * box.length - (rectLeft + parentWidth) + padding + 100;
       translateX = isNaN(calcX) || calcX < 0 ? 0 : calcX;
     }
 
@@ -90,11 +98,11 @@ const Work = () => {
             </div>
           ))}
           {/* See All Works Button */}
-          <div className="work-box work-box-cta">
+          <div className="work-box work-box-cta" onClick={handleSeeAllWorks} style={{ cursor: "pointer" }}>
             <div className="see-all-works">
               <h3>Want to see more?</h3>
               <p>Explore all of my projects and creations</p>
-              <Link to="/myworks" className="see-all-btn" data-cursor="disable">
+              <Link to="/myworks" onClick={handleSeeAllWorks} className="see-all-btn" data-cursor="disable">
                 See All Works →
               </Link>
             </div>

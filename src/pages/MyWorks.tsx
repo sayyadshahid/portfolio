@@ -34,7 +34,9 @@ const MyWorks = () => {
           const isInternalLink = Boolean(project.link?.startsWith("/"));
           const cardContent = (
             <>
-              <div className="myworks-card-number">0{index + 1}</div>
+              <div className="myworks-card-number">
+                {index + 1 < 10 ? `0${index + 1}` : index + 1}
+              </div>
               <div className="myworks-card-image">
                 <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
               </div>
