@@ -300,21 +300,30 @@
 }
 
 .see-all-btn {
-  display: inline-block;
-  padding: 15px 35px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #000;
-  background: var(--accentColor);
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: 10px;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px 36px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #0d0a12 !important;
+  background: #ffffff !important;
+  border-radius: 30px !important;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  margin-top: 12px !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25), 0 0 30px rgba(194, 164, 255, 0.4) !important;
+  position: relative !important;
+  z-index: 10 !important;
+  letter-spacing: 0.5px !important;
+  white-space: nowrap !important;
 }
 
 .see-all-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(194, 164, 255, 0.4);
+  transform: translateY(-2px) scale(1.04) !important;
+  background: var(--accentColor) !important;
+  color: #000000 !important;
+  box-shadow: 0 10px 35px rgba(194, 164, 255, 0.6) !important;
 }
 
 /* Mobile: Content-Compact Desktop-Matching Cards with Zero Whitespace */
