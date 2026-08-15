@@ -153,9 +153,9 @@ const SocialIcons = () => {
         </a>
       </div>
 
-      {/* Resume Modal View - Matching Old Portfolio Design */}
+      {/* Resume Modal View - Centered Modal Popup */}
       <Dialog
-        fullScreen={isMobile}
+        fullScreen={false}
         open={openCV}
         onClose={handleCloseCV}
         maxWidth="md"
@@ -163,13 +163,13 @@ const SocialIcons = () => {
         PaperProps={{
           sx: {
             maxWidth: "800px",
-            maxHeight: isMobile ? "100vh" : "90vh",
-            height: isMobile ? "auto" : "auto",
-            borderRadius: isMobile ? 0 : 3,
+            maxHeight: "90vh",
+            height: "auto",
+            borderRadius: 3,
             bgcolor: "#fff",
             overflow: "hidden",
             position: "relative",
-            m: isMobile ? 0 : 4,
+            m: { xs: 2, md: 4 },
           },
         }}
       >
