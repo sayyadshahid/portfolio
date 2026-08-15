@@ -23,15 +23,17 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import { lenis } from "./Navbar";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const SocialIcons = () => {
   const [openCV, setOpenCV] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleOpenCV = (e: React.MouseEvent) => {
     e.preventDefault();
+    setPdfError(false);
     setOpenCV(true);
   };
 
@@ -230,43 +232,74 @@ const SocialIcons = () => {
               pb: 2,
             }}
           >
-            <Document
-              file="./shahid-CV.pdf"
-              externalLinkTarget="_blank"
-              loading={
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "50vh",
-                    width: "100%",
-                  }}
-                >
-                  <Typography sx={{ color: "#333" }}>Loading CV...</Typography>
-                </Box>
-              }
-              error={
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "50vh",
-                    width: "100%",
-                  }}
-                >
-                  <Typography color="error">Failed to load CV.</Typography>
-                </Box>
-              }
-            >
-              <Page
-                pageNumber={1}
-                renderTextLayer={false}
-                renderAnnotationLayer={true}
-                width={isMobile ? window.innerWidth : 800}
-              />
-            </Document>
+            {pdfError ? (
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "80vh",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 2,
+                  p: 2,
+                }}
+              >
+                <iframe
+                  src="./shahid-CV.pdf"
+                  title="Shahid Sayyad CV"
+                  width="100%"
+                  height="100%"
+                  style={{ border: "none", borderRadius: "8px" }}
+                />
+              </Box>
+            ) : (
+              <Document
+                file="./shahid-CV.pdf"
+                externalLinkTarget="_blank"
+                onLoadError={() => setPdfError(true)}
+                loading={
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "50vh",
+                      width: "100%",
+                    }}
+                  >
+                    <Typography sx={{ color: "#333" }}>Loading CV...</Typography>
+                  </Box>
+                }
+                error={
+                  <Box
+                    sx={{
+                      width: "100%",
+                      height: "75vh",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <iframe
+                      src="./shahid-CV.pdf"
+                      title="Shahid Sayyad CV"
+                      width="100%"
+                      height="100%"
+                      style={{ border: "none", borderRadius: "8px" }}
+                    />
+                  </Box>
+                }
+              >
+                <Page
+                  pageNumber={1}
+                  renderTextLayer={false}
+                  renderAnnotationLayer={true}
+                  width={isMobile ? window.innerWidth : 800}
+                />
+              </Document>
+            )}
           </Box>
         </DialogContent>
       </Dialog>
