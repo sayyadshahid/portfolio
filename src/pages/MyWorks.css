@@ -3,6 +3,9 @@
   background-color: var(--backgroundColor);
   padding: 80px 40px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+  overflow-y: visible !important;
 }
 
 .myworks-header {

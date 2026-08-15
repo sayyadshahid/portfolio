@@ -1,8 +1,22 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { config } from "../config";
 import "./MyWorks.css";
 
 const MyWorks = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.style.overflowY = "auto";
+    document.body.style.height = "auto";
+    document.documentElement.style.overflowY = "auto";
+
+    return () => {
+      document.body.style.overflowY = "";
+      document.body.style.height = "";
+      document.documentElement.style.overflowY = "";
+    };
+  }, []);
+
   return (
     <div className="myworks-page">
       <div className="myworks-header">

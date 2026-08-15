@@ -47,6 +47,51 @@ export const config = {
     projects: [
         {
             id: 1,
+            title: "Microzen Technologies",
+            category: "Full Stack / Corporate Agency Platform",
+            technologies: "Next.js 15, React, Framer Motion, Tailwind CSS, MySQL, Resend",
+            image: "/images/microzen.png",
+            description: "Official corporate web platform for Microzen Technologies featuring high-performance animations, dynamic service showcases, internationalization (i18n), and contact inquiry forms.",
+            link: "https://microzentechnologies.com/"
+        },
+        {
+            id: 2,
+            title: "Healthy Eats",
+            category: "Full Stack / E-Commerce & Delivery",
+            technologies: "Next.js 16, React 19, Supabase, PostgreSQL, CyberSource Payment, MapLibre",
+            image: "/images/healthyeats.png",
+            description: "Modern food ordering and meal delivery web platform with interactive map delivery tracking, payment gateway integration, and real-time order state management.",
+            link: "https://healthy-eats-one.vercel.app/"
+        },
+        {
+            id: 3,
+            title: "Ctrl Connect",
+            category: "Full Stack / Enterprise Dashboard",
+            technologies: "Angular 21, TypeScript, Tailwind CSS, Chart.js, TanStack Table, RxJS",
+            image: "/images/controlconnect.png",
+            description: "Comprehensive enterprise dashboard featuring real-time data analytics, dynamic data tables, interactive Chart.js visualizations, and role-based admin controls.",
+            link: "https://ctrl-connect.vercel.app/dashboard"
+        },
+        {
+            id: 4,
+            title: "Nuytic AI",
+            category: "Full Stack / AI & Mobile",
+            technologies: "React, React Native, TypeScript, Expo, .NET, PostgreSQL, OpenAI API",
+            image: "/images/nuytic.png",
+            description: "Cross-platform health app featuring AI-powered meal scanning, nutrition estimation, personalized meal planning, English/Arabic i18n, RTL support, and subscription feature gating.",
+            link: "https://nuytic.com/"
+        },
+        {
+            id: 5,
+            title: "Zmerk Consultancy",
+            category: "Frontend / Business Consultancy",
+            technologies: "React 19, TypeScript, Vite, Framer Motion, i18next, Tailwind CSS",
+            image: "/images/zmerk.png",
+            description: "Modern corporate consultancy web application featuring multilingual support (i18n), interactive Lottie animations, Swiper carousels, and responsive service portals.",
+            link: "https://www.zmerkconsultancy.com/"
+        },
+        {
+            id: 6,
             title: "Hospital Management System",
             category: "Full Stack / AI Chatbot",
             technologies: "React, FastAPI, Python, MongoDB, AI Chatbot",
@@ -55,7 +100,7 @@ export const config = {
             link: "https://hospital-managment-dynamic-web-app-shahids-projects-7019af7c.vercel.app/"
         },
         {
-            id: 2,
+            id: 7,
             title: "Yazdaan Academy",
             category: "E-Learning Platform",
             technologies: "React, Node.js, Express, MongoDB, Admin Panel",
@@ -64,7 +109,7 @@ export const config = {
             link: "https://yazdaan-academy.vercel.app/"
         },
         {
-            id: 3,
+            id: 8,
             title: "Clouds Networking",
             category: "Cloud Platform",
             technologies: "React, FastAPI, PostgreSQL, Python, REST APIs",
@@ -73,7 +118,7 @@ export const config = {
             link: "https://cloudsnetworking.in/"
         },
         {
-            id: 4,
+            id: 9,
             title: "Alhaq Institute LMS",
             category: "LMS / Frontend",
             technologies: "React, Material UI, JavaScript, HTML5/CSS3",
@@ -82,7 +127,7 @@ export const config = {
             link: "https://www.alhaqinstitute.com/"
         },
         {
-            id: 5,
+            id: 10,
             title: "Pokédex Explorer",
             category: "Frontend Web App",
             technologies: "React, TypeScript, PokéAPI, CSS3",

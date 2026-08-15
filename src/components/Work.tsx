@@ -10,32 +10,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   useEffect(() => {
-    let translateX: number = 0;
+    function getTranslateX() {
+      const workFlex = document.querySelector<HTMLElement>(".work-flex");
+      const workContainer = document.querySelector<HTMLElement>(".work-container");
+      if (!workFlex || !workContainer) return 0;
 
-    function setTranslateX() {
-      const box = document.getElementsByClassName("work-box");
-      if (box.length === 0) return;
-      const workContainer = document.querySelector(".work-container");
-      if (!workContainer) return;
-      const rectLeft = workContainer.getBoundingClientRect().left;
-      const rect = box[0].getBoundingClientRect();
-      const parentElement = box[0].parentElement;
-      const parentWidth = parentElement ? parentElement.getBoundingClientRect().width : window.innerWidth;
-      const style = window.getComputedStyle(box[0]);
-      const paddingLeft = parseFloat(style.paddingLeft) || 0;
-      const paddingRight = parseFloat(style.paddingRight) || 0;
-      let padding: number = (paddingLeft + paddingRight) / 2;
-      const calcX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-      translateX = isNaN(calcX) || calcX < 0 ? 0 : calcX;
+      const calcX = workFlex.scrollWidth - workContainer.clientWidth + 40;
+      return isNaN(calcX) || calcX < 0 ? 0 : calcX;
     }
-
-    setTranslateX();
 
     let timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".work-section",
         start: "top top",
-        end: `+=${translateX}`,
+        end: () => `+=${getTranslateX()}`,
         scrub: 1,
         pin: true,
         pinSpacing: true,
@@ -46,15 +34,24 @@ const Work = () => {
     });
 
     timeline.to(".work-flex", {
-      x: -translateX,
+      x: () => -getTranslateX(),
       ease: "none",
     });
 
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("resize", handleResize);
+
     // Refresh ScrollTrigger after layout settles
-    ScrollTrigger.refresh();
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 200);
 
     // Clean up
     return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", handleResize);
       timeline.kill();
       ScrollTrigger.getById("work")?.kill();
     };
