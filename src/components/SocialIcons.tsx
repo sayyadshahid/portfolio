@@ -153,7 +153,7 @@ const SocialIcons = () => {
         </a>
       </div>
 
-      {/* Resume Modal View - Responsive PDF Canvas with Close & Download Buttons */}
+      {/* Resume Modal View - Matching Old Portfolio Design */}
       <Dialog
         fullScreen={isMobile}
         open={openCV}
@@ -163,8 +163,8 @@ const SocialIcons = () => {
         PaperProps={{
           sx: {
             maxWidth: "800px",
-            height: isMobile ? "100vh" : "90vh",
             maxHeight: isMobile ? "100vh" : "90vh",
+            height: isMobile ? "auto" : "auto",
             borderRadius: isMobile ? 0 : 3,
             bgcolor: "#fff",
             overflow: "hidden",
@@ -173,56 +173,23 @@ const SocialIcons = () => {
           },
         }}
       >
-        {/* Top-Right Close Button */}
         <IconButton
           aria-label="close"
           onClick={handleCloseCV}
           sx={{
             position: "absolute",
-            right: 12,
-            top: 12,
-            color: "grey.700",
-            zIndex: 11,
-            bgcolor: "rgba(255, 255, 255, 0.9)",
-            boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+            right: 8,
+            top: 8,
+            color: "grey.500",
+            zIndex: 1,
+            bgcolor: "rgba(255, 255, 255, 0.8)",
             "&:hover": {
-              bgcolor: "#ffffff",
+              bgcolor: "rgba(255, 255, 255, 1)",
             },
           }}
         >
           <CloseIcon />
         </IconButton>
-
-        {/* Top-Right Download Button */}
-        <Button
-          component="a"
-          href="./shahid-CV.pdf"
-          download="Shahid_Sayyad_Resume.pdf"
-          variant="contained"
-          size="small"
-          startIcon={<DownloadIcon />}
-          sx={{
-            position: "absolute",
-            right: 64,
-            top: 12,
-            zIndex: 10,
-            bgcolor: "#0b080c",
-            color: "#ffffff",
-            borderRadius: "20px",
-            textTransform: "none",
-            fontSize: "13px",
-            fontWeight: 600,
-            px: 2.2,
-            py: 0.7,
-            boxShadow: "0 4px 14px rgba(0, 0, 0, 0.25)",
-            "&:hover": {
-              bgcolor: "#c2a4ff",
-              color: "#0b080c",
-            },
-          }}
-        >
-          Download
-        </Button>
 
         <DialogContent
           onWheel={(e) => e.stopPropagation()}
@@ -233,14 +200,12 @@ const SocialIcons = () => {
             justifyContent: "center",
             alignItems: "flex-start",
             bgcolor: "#fff",
-            height: "100%",
-            maxHeight: "100%",
             overflowY: "auto",
             WebkitOverflowScrolling: "touch",
-            scrollbarWidth: "none", // Firefox
-            msOverflowStyle: "none", // IE/Edge
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
             "&::-webkit-scrollbar": {
-              display: "none", // Chrome, Safari, Opera
+              display: "none",
             },
           }}
         >
@@ -250,21 +215,16 @@ const SocialIcons = () => {
               justifyContent: "center",
               width: "100%",
               minHeight: "100%",
-              pt: { xs: 7, md: 2 },
-              pb: 2,
+              pt: 0,
+              pb: 0,
             }}
           >
             {pdfError ? (
               <Box
                 sx={{
                   width: "100%",
-                  height: isMobile ? "calc(100vh - 60px)" : "80vh",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 2,
-                  p: 1,
+                  height: isMobile ? "100vh" : "80vh",
+                  p: 0,
                 }}
               >
                 <iframe
@@ -272,7 +232,7 @@ const SocialIcons = () => {
                   title="Shahid Sayyad CV"
                   width="100%"
                   height="100%"
-                  style={{ border: "none", borderRadius: "8px" }}
+                  style={{ border: "none" }}
                 />
               </Box>
             ) : (
@@ -297,11 +257,8 @@ const SocialIcons = () => {
                   <Box
                     sx={{
                       width: "100%",
-                      height: isMobile ? "calc(100vh - 60px)" : "80vh",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      height: isMobile ? "100vh" : "80vh",
+                      p: 0,
                     }}
                   >
                     <iframe
@@ -309,7 +266,7 @@ const SocialIcons = () => {
                       title="Shahid Sayyad CV"
                       width="100%"
                       height="100%"
-                      style={{ border: "none", borderRadius: "8px" }}
+                      style={{ border: "none" }}
                     />
                   </Box>
                 }
