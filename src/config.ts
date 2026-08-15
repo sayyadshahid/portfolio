@@ -50,7 +50,7 @@ export const config = {
             title: "Microzen Technologies",
             category: "Full Stack / Corporate Agency Platform",
             technologies: "Next.js 15, React, Framer Motion, Tailwind CSS, MySQL, Resend",
-            image: "/images/microzen.png",
+            image: "./images/microzen.png",
             description: "Official corporate web platform for Microzen Technologies featuring high-performance animations, dynamic service showcases, internationalization (i18n), and contact inquiry forms.",
             link: "https://microzentechnologies.com/"
         },
@@ -59,7 +59,7 @@ export const config = {
             title: "Healthy Eats",
             category: "Full Stack / E-Commerce & Delivery",
             technologies: "Next.js 16, React 19, Supabase, PostgreSQL, CyberSource Payment, MapLibre",
-            image: "/images/healthyeats.png",
+            image: "./images/healthyeats.png",
             description: "Modern food ordering and meal delivery web platform with interactive map delivery tracking, payment gateway integration, and real-time order state management.",
             link: "https://healthy-eats-one.vercel.app/"
         },
@@ -68,7 +68,7 @@ export const config = {
             title: "Ctrl Connect",
             category: "Full Stack / Enterprise Dashboard",
             technologies: "Angular 21, TypeScript, Tailwind CSS, Chart.js, TanStack Table, RxJS",
-            image: "/images/controlconnect.png",
+            image: "./images/controlconnect.png",
             description: "Comprehensive enterprise dashboard featuring real-time data analytics, dynamic data tables, interactive Chart.js visualizations, and role-based admin controls.",
             link: "https://ctrl-connect.vercel.app/dashboard"
         },
@@ -77,7 +77,7 @@ export const config = {
             title: "Nuytic AI",
             category: "Full Stack / AI & Mobile",
             technologies: "React, React Native, TypeScript, Expo, .NET, PostgreSQL, OpenAI API",
-            image: "/images/nuytic.png",
+            image: "./images/nuytic.png",
             description: "Cross-platform health app featuring AI-powered meal scanning, nutrition estimation, personalized meal planning, English/Arabic i18n, RTL support, and subscription feature gating.",
             link: "https://nuytic.com/"
         },
@@ -86,7 +86,7 @@ export const config = {
             title: "Zmerk Consultancy",
             category: "Frontend / Business Consultancy",
             technologies: "React 19, TypeScript, Vite, Framer Motion, i18next, Tailwind CSS",
-            image: "/images/zmerk.png",
+            image: "./images/zmerk.png",
             description: "Modern corporate consultancy web application featuring multilingual support (i18n), interactive Lottie animations, Swiper carousels, and responsive service portals.",
             link: "https://www.zmerkconsultancy.com/"
         },
@@ -95,7 +95,7 @@ export const config = {
             title: "Hospital Management System",
             category: "Full Stack / AI Chatbot",
             technologies: "React, FastAPI, Python, MongoDB, AI Chatbot",
-            image: "/images/hospital_management.png",
+            image: "./images/hospital_management.png",
             description: "A web-based Hospital Management System with multi-hospital support, secure admin panels, and AI chatbot integration for streamlined operations.",
             link: "https://hospital-managment-dynamic-web-app-shahids-projects-7019af7c.vercel.app/"
         },
@@ -104,7 +104,7 @@ export const config = {
             title: "Yazdaan Academy",
             category: "E-Learning Platform",
             technologies: "React, Node.js, Express, MongoDB, Admin Panel",
-            image: "/images/yazdaan.png",
+            image: "./images/yazdaan.png",
             description: "A web-based e-learning platform built at Fladdra Technologies featuring course sales, lecture access, and a secure admin management portal.",
             link: "https://yazdaan-academy.vercel.app/"
         },
@@ -113,7 +113,7 @@ export const config = {
             title: "Clouds Networking",
             category: "Cloud Platform",
             technologies: "React, FastAPI, PostgreSQL, Python, REST APIs",
-            image: "/images/clouds.png",
+            image: "./images/clouds.png",
             description: "Full-stack cloud service platform including user/admin panels, course syllabi APIs, auth, feedback, blog management, and email integration.",
             link: "https://cloudsnetworking.in/"
         },
@@ -122,7 +122,7 @@ export const config = {
             title: "Alhaq Institute LMS",
             category: "LMS / Frontend",
             technologies: "React, Material UI, JavaScript, HTML5/CSS3",
-            image: "/images/alhaq.png",
+            image: "./images/alhaq.png",
             description: "Learning Management System for Alhaq Institute featuring responsive UI and admin management for courses, lectures, and student records.",
             link: "https://www.alhaqinstitute.com/"
         },
@@ -131,7 +131,7 @@ export const config = {
             title: "Pokédex Explorer",
             category: "Frontend Web App",
             technologies: "React, TypeScript, PokéAPI, CSS3",
-            image: "/images/pokedex.png",
+            image: "./images/pokedex.png",
             description: "Interactive Pokémon database application showcasing real-time API filtering, stats visualization, and responsive card layouts.",
             link: "https://pokedex-ochre-nine.vercel.app/"
         }

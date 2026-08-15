@@ -32,7 +32,7 @@ const MainContainer = () => {
       <SocialIcons />
       {/* Single Hero Photo animated across sections */}
       <div className="single-hero-photo">
-        <img src="/images/shahid.png" alt="Shahid" />
+        <img src="./images/shahid.png" alt="Shahid" />
       </div>
       <div className="container-main">
         <Landing />

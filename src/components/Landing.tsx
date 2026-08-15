@@ -21,7 +21,7 @@ const Landing = ({ children }: PropsWithChildren) => {
             </h1>
           </div>
           <div className="mobile-hero-photo">
-            <img src="/images/shahid.png" alt="Shahid" />
+            <img src="./images/shahid.png" alt="Shahid" />
           </div>
           <div className="landing-info">
             <h3>A</h3>
