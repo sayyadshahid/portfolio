@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
@@ -131,11 +130,6 @@ const SocialIcons = () => {
           <span>
             <a href={(config.contact as any).twitter || "#"} target="_blank" rel="noopener noreferrer">
               <FaXTwitter />
-            </a>
-          </span>
-          <span>
-            <a href={(config.contact as any).instagram || "#"} target="_blank" rel="noopener noreferrer">
-              <FaInstagram />
             </a>
           </span>
         </div>
