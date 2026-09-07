@@ -12,13 +12,11 @@ import {
   Dialog,
   DialogContent,
   Button,
-  IconButton,
   Box,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import DownloadIcon from "@mui/icons-material/Download";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
@@ -154,16 +152,18 @@ const SocialIcons = () => {
         onClose={handleCloseCV}
         maxWidth="md"
         fullWidth
-        PaperProps={{
-          sx: {
-            maxWidth: "800px",
-            maxHeight: "90vh",
-            height: "auto",
-            borderRadius: 3,
-            bgcolor: "#fff",
-            overflow: "hidden",
-            position: "relative",
-            m: { xs: 2, md: 4 },
+        slotProps={{
+          paper: {
+            sx: {
+              maxWidth: "800px",
+              maxHeight: "90vh",
+              height: "auto",
+              borderRadius: 3,
+              bgcolor: "#fff",
+              overflow: "hidden",
+              position: "relative",
+              m: { xs: 2, md: 4 },
+            },
           },
         }}
       >
