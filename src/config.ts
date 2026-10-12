@@ -16,11 +16,11 @@ export const config = {
     },
     experiences: [
         {
-            position: "Frontend Developer",
+            position: "Software Engineer",
             company: "Microzen Technologies",
             period: "Mar 2026 – Present",
             location: "Pune, India",
-            description: "Leading frontend development using React.js and React Native, delivering scalable, high-performance applications and optimizing UI/UX performance.",
+            description: "Leading Software Engineer using React.js and React Native, delivering scalable, high-performance applications and optimizing UI/UX performance.",
             responsibilities: [
                 "Leading frontend development using React.js and React Native for scalable applications",
                 "Managing multiple projects and collaborating with cross-functional teams for efficient delivery",
