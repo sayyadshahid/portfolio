@@ -20,9 +20,18 @@ const MyWorks = () => {
   return (
     <div className="myworks-page">
       <div className="myworks-header">
-        <Link to="/" className="back-button" data-cursor="disable">
+        <a
+          href="#/"
+          className="back-button"
+          data-cursor="disable"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.hash = "#/";
+            window.location.reload();
+          }}
+        >
           ← Back to Home
-        </Link>
+        </a>
         <h1>
           All <span>Works</span>
         </h1>
