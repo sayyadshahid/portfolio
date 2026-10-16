@@ -1,9 +1,8 @@
-import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
 import { config } from "../config";
 import AetherFlowHero from "@/components/ui/aether-flow-hero";
 
-const Landing = ({ children }: PropsWithChildren) => {
+const Landing = () => {
   const nameParts = config.developer.fullName.split(" ");
   const firstName = nameParts[0] || config.developer.name;
   const lastName = nameParts.slice(1).join(" ") || "";
@@ -39,7 +38,6 @@ const Landing = ({ children }: PropsWithChildren) => {
             </h2>
           </div>
         </div>
-        {children}
       </div>
     </>
   );

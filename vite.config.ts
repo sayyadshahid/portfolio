@@ -19,8 +19,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'three': ['three', 'three-stdlib'],
-          'react-three': ['@react-three/fiber', '@react-three/drei'],
           'gsap': ['gsap'],
           'vendor': ['react', 'react-dom', 'react-router-dom']
         }
@@ -36,6 +34,6 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
-    include: ['three', 'gsap', 'lenis']
+    include: ['gsap', 'lenis']
   }
 });

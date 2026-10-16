@@ -1,14 +1,7 @@
 export const config = {
     developer: {
         name: "Shahid",
-        fullName: "Shahid Sayyad",
-        title: "Frontend & Full-Stack Developer",
-        description: "Frontend & Full-Stack Web Developer with robust problem-solving skills and proven experience building scalable, high-performance web applications and mobile apps."
-    },
-    social: {
-        github: "sayyadshahid",
-        email: "i.shahidsayyad@gmail.com",
-        location: "Pune, India"
+        fullName: "Shahid Sayyad"
     },
     about: {
         title: "About Me",
@@ -19,29 +12,13 @@ export const config = {
             position: "Software Engineer",
             company: "Microzen Technologies",
             period: "Mar 2026 – Present",
-            location: "Pune, India",
-            description: "Leading Software Engineer using React.js and React Native, delivering scalable, high-performance applications and optimizing UI/UX performance.",
-            responsibilities: [
-                "Leading frontend development using React.js and React Native for scalable applications",
-                "Managing multiple projects and collaborating with cross-functional teams for efficient delivery",
-                "Working with modern frameworks like Next.js and contributing to Angular-based projects",
-                "Optimizing UI/UX performance and building scalable frontend architectures"
-            ],
-            technologies: ["React.js", "React Native", "Next.js", "Angular", "TypeScript", "UI/UX"]
+            description: "Leading Software Engineer using React.js and React Native, delivering scalable, high-performance applications and optimizing UI/UX performance."
         },
         {
             position: "Full Stack Developer",
             company: "Fladdra Technologies",
             period: "Jan 2025 – Dec 2025",
-            location: "Pune, India",
-            description: "Built and optimized highly responsive UI components, RESTful APIs, and administrative control systems.",
-            responsibilities: [
-                "Built and optimized highly responsive, reusable UI components in React.js, improving load time by 30%",
-                "Designed and deployed RESTful APIs with FastAPI for secure authentication and data handling",
-                "Developed and maintained admin & user panels, reducing manual workflows by 40%",
-                "Collaborated with cross-functional teams to integrate frontend and backend seamlessly"
-            ],
-            technologies: ["React.js", "FastAPI", "Python", "REST APIs", "PostgreSQL", "UI Optimization"]
+            description: "Built and optimized highly responsive UI components, RESTful APIs, and administrative control systems."
         }
     ],
     projects: [
@@ -61,7 +38,7 @@ export const config = {
             technologies: "Next.js 16, React 19, Supabase, PostgreSQL, CyberSource Payment, MapLibre",
             image: "./images/healthyeats.png",
             description: "Modern food ordering and meal delivery web platform with interactive map delivery tracking, payment gateway integration, and real-time order state management.",
-            link: "https://healthy-eats-one.vercel.app/"
+            link: "https://healthyeats.sx/"
         },
         {
             id: 3,
